@@ -1,0 +1,147 @@
+import Image from "next/image";
+import { CopyCode } from "@/components/CopyCode";
+import { TopBar } from "@/components/TopBar";
+import {
+  ArrowRight,
+  Check,
+  Chevron,
+  Discord,
+  Instagram,
+  Search,
+  Sheet,
+  Telegram,
+  TikTok,
+  YouTube,
+  YouTubePlay,
+} from "@/components/icons";
+import { HANDLE, INVITE_CODE, LINKS } from "@/lib/site";
+import photo from "@/assets/mariosanczz.jpg";
+
+type ExtProps = {
+  href: string;
+  event: string;
+  className: string;
+  label?: string;
+  children: React.ReactNode;
+};
+
+/** External link: new tab + Umami click event (tracked via data attribute, no JS needed). */
+function Ext({ href, event, className, label, children }: ExtProps) {
+  return (
+    <a className={className} href={href} target="_blank" rel="noopener" data-umami-event={event} aria-label={label}>
+      {children}
+    </a>
+  );
+}
+
+export default function Home() {
+  return (
+    <>
+      <TopBar />
+
+      <main className="wrap">
+        {/* ================= HERO ================= */}
+        <header className="hero reveal">
+          <div className="idbar">
+            <div className="idtext">
+              <h1 className="name">
+                {HANDLE}
+                <span className="vf">
+                  <Check />
+                </span>
+              </h1>
+              <p className="pitch">
+                Comprar en el mercado chino, <b>fácil y barato</b>
+              </p>
+            </div>
+            <div className="photo-wrap">
+              <Image className="hero-photo" src={photo} alt={HANDLE} width={78} height={78} loading="eager" />
+            </div>
+          </div>
+        </header>
+
+        {/* ================= TICKET / CTA HIPOBUY ================= */}
+        <section className="ticket reveal d05">
+          <div className="ticket-top">
+            <span className="ticket-ey">Empieza aquí</span>
+          </div>
+          <h2>Compra ropa en el mercado chino</h2>
+          <p className="sub">Accede a Hipobuy, donde consigo los outfits de los vídeos.</p>
+
+          <hr className="dash" />
+
+          <Ext className="cta-btn" href={LINKS.hipobuy} event="1_registro_boton">
+            <span className="cta-label">
+              Crear mi cuenta para ver
+              <br />
+              la LISTA de productos
+            </span>
+            <ArrowRight />
+          </Ext>
+          <CopyCode code={INVITE_CODE} />
+        </section>
+
+        {/* ================= 3 PASOS ================= */}
+        <ol className="steps reveal d10">
+          <li className="step"><div className="n">1</div><p>Crea tu cuenta</p></li>
+          <li className="step"><div className="n">2</div><p>Elige tu outfit</p></li>
+          <li className="step"><div className="n">3</div><p>Recíbelo en casa</p></li>
+        </ol>
+
+        {/* ================= VÍDEO CÓMO COMPRAR ================= */}
+        <Ext className="link reveal d11" href={LINKS.comoComprar} event="2_video_tutorial">
+          <span className="ico"><YouTubePlay /></span>
+          <span className="txt"><span className="t">¿No sabes comprar? Míralo aquí</span><span className="s">Apréndelo en unos minutos</span></span>
+          <Chevron />
+        </Ext>
+
+        {/* ================= ENLACES PRINCIPALES ================= */}
+        <h3 className="eyebrow reveal d12">Listas de compra</h3>
+
+        <Ext className="link featured reveal d14" href={LINKS.productos} event="2_lista_productos">
+          <span className="ico"><Sheet /></span>
+          <span className="txt"><span className="t">Lista de productos</span><span className="s">Todas las prendas con su enlace de compra</span></span>
+          <Chevron />
+        </Ext>
+
+        <Ext className="link reveal d16" href={LINKS.outfits} event="2_lista_outfits">
+          <span className="ico"><Sheet /></span>
+          <span className="txt"><span className="t">Lista de outfits</span><span className="s">Los conjuntos ya montados y su precio</span></span>
+          <Chevron />
+        </Ext>
+
+        <Ext className="link reveal d18" href={LINKS.buscador} event="2_buscar_por_foto">
+          <span className="ico"><Search /></span>
+          <span className="txt"><span className="t">¿Buscas otra prenda? Búscala por foto</span><span className="s">Mándame la foto y te paso el link</span></span>
+          <Chevron />
+        </Ext>
+
+        {/* ================= COMUNIDAD ================= */}
+        <h3 className="eyebrow reveal d20">¿Tienes dudas? Háblame aquí</h3>
+
+        <div className="duo reveal d22">
+          <Ext className="link" href={LINKS.discord} event="3_discord">
+            <span className="ico"><Discord /></span>
+            <span className="txt"><span className="t">Discord</span></span>
+          </Ext>
+          <Ext className="link" href={LINKS.telegram} event="3_telegram">
+            <span className="ico"><Telegram /></span>
+            <span className="txt"><span className="t">Telegram</span></span>
+          </Ext>
+        </div>
+
+        {/* ================= REDES ================= */}
+        <h3 className="eyebrow reveal d24">Sígueme</h3>
+        <div className="socials reveal d26">
+          <Ext className="social" href={LINKS.instagram} event="4_instagram" label="Instagram"><Instagram /></Ext>
+          <Ext className="social" href={LINKS.tiktok} event="4_tiktok" label="TikTok"><TikTok /></Ext>
+          <Ext className="social" href={LINKS.youtube} event="4_youtube" label="YouTube"><YouTube /></Ext>
+        </div>
+
+        <footer className="foot reveal d28">
+          Hecho por <b>{HANDLE}</b> + <b>{INVITE_CODE}</b>
+        </footer>
+      </main>
+    </>
+  );
+}

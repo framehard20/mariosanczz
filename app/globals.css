@@ -1,0 +1,263 @@
+/* Consolidated from the original index.html: every rule below is the final
+   computed result of the old stacked overrides, so the page renders the same. */
+
+:root{
+  --bg:#F1F0EB;
+  --card:#FFFFFF;
+  --ink:#181A18;
+  --ink-2:#2C2E2B;
+  --muted:#797A74;
+  --line:#E7E5DD;
+  --green:#22C55E;
+  --green-deep:#16A34A;
+  --green-soft:#E7F6EC;
+  --dark:#16181A;
+  --radius:18px;
+  --shadow:0 1px 0 rgba(24,26,24,.04), 0 14px 34px -20px rgba(24,26,24,.34);
+  --font:-apple-system,system-ui,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font);
+  background:linear-gradient(180deg,#FCFCFB 0%,#F5F5F2 58%,#EFEFEC 100%);
+  background-attachment:fixed;
+  color:var(--ink);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  padding:0 16px 44px;
+  min-height:100vh;
+}
+.wrap{max-width:440px;margin:0 auto;display:block}
+
+/* ================= STICKY BAR ================= */
+.topbar{position:sticky;top:0;z-index:50;padding:11px 12px 0;background:transparent}
+.topbar-in{display:block;max-width:440px;margin:0 auto;background:var(--dark);color:#fff;
+  border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:12px 13px;
+  box-shadow:0 12px 30px -12px rgba(0,0,0,.55);
+  transition:box-shadow .45s ease,border-color .45s ease}
+.topbar.scrolled .topbar-in{border-color:rgba(34,197,94,.75);
+  box-shadow:0 0 0 1.5px rgba(34,197,94,.55),0 0 26px 4px rgba(34,197,94,.62),
+             0 0 46px 8px rgba(34,197,94,.30),0 12px 30px -12px rgba(0,0,0,.55);
+  animation:glowin .5s ease}
+.tb-row{display:flex;align-items:stretch;gap:11px}
+.tb-txt{flex:1 1 0;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:1px;line-height:1.25}
+.tb-disc{color:var(--green);font-family:var(--font);font-weight:900;font-size:27px;line-height:.92;letter-spacing:-.5px}
+.tb-msg{font-size:11px;color:#C7C7D0;font-weight:500;line-height:1;margin-top:1px}
+.tb-clockbox{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.38);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:8px 12px;min-width:96px}
+.tb-clockbox .tb-k{font-family:var(--font);font-size:8px;letter-spacing:1.4px;color:#9A9AA6;text-transform:uppercase;margin-bottom:3px}
+.tb-clock{font-family:var(--font);font-weight:900;font-size:21px;font-variant-numeric:tabular-nums;
+  color:#FFC940;letter-spacing:.5px;line-height:1;transition:color .4s}
+.tb-clock.warn{color:#FFC940;animation:softpulse 1.6s ease-in-out infinite}
+.tb-clock.hot{color:#FF4D4D;animation:softpulse 1s ease-in-out infinite}
+.tb-right{flex:1 1 0;display:flex;justify-content:flex-end;align-items:stretch}
+
+/* Top-bar CTA — restyled to match the ticket button (shine sweep, arrow, green halo) */
+.tb-btn{position:relative;overflow:hidden;flex-shrink:0;align-self:stretch;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  background:var(--green);color:var(--ink);text-decoration:none;
+  font-family:var(--font);font-weight:900;font-size:12.5px;letter-spacing:-.1px;
+  padding:0 11px 0 13px;border-radius:12px;white-space:nowrap;text-align:left;line-height:1.1;
+  box-shadow:0 3px 0 var(--green-deep),0 0 16px -3px rgba(34,197,94,.7);
+  transition:transform .12s,box-shadow .12s}
+.tb-btn svg{width:14px;height:14px;flex-shrink:0}
+.tb-btn::after{
+  content:"";position:absolute;top:0;bottom:0;left:-60%;width:45%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);
+  transform:skewX(-18deg);animation:shine 3.4s ease-in-out 1.7s infinite}
+.tb-btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--green-deep),0 0 10px -3px rgba(34,197,94,.6)}
+@media (hover:hover){
+  .tb-btn:hover svg{transform:translateX(2px)}
+}
+.tb-btn svg{transition:transform .12s}
+
+.tb-50bar{margin-top:10px;padding-top:9px;border-top:1px solid rgba(255,255,255,.08);
+  text-align:center;font-family:var(--font);font-size:10px;letter-spacing:.2px;color:#C7C7D0;
+  white-space:nowrap;overflow:hidden}
+.tb-50bar b{color:var(--green);font-weight:700;font-size:11.5px}
+@keyframes glowin{from{box-shadow:0 12px 30px -12px rgba(0,0,0,.55)}}
+@keyframes softpulse{50%{opacity:.62}}
+@media (max-width:392px){
+  .tb-clock{font-size:18px}
+  .tb-disc{font-size:23px}
+  .tb-msg{font-size:10px}
+  .tb-btn{font-size:11.5px;padding:0 9px 0 11px;gap:4px}
+  .tb-btn svg{width:12px;height:12px}
+  .tb-50bar b{font-size:10.5px}
+}
+/* Bug fix: in the original these compact rules were overridden later in the file,
+   so on ≤360px phones "-25%" collided with the clock and "¡Aprovecha!" was clipped. */
+@media (max-width:360px){
+  .tb-row{gap:8px}
+  .topbar-in{padding:11px 10px}
+  .tb-clockbox{min-width:0;padding:6px 8px}
+  .tb-clock{font-size:16px}
+  .tb-disc{font-size:20px}
+  .tb-msg{font-size:9.5px;white-space:nowrap}
+  .tb-btn{font-size:11px;padding:0 8px 0 10px}
+  .tb-50bar{font-size:9px;letter-spacing:0}
+  .tb-50bar b{font-size:10px}
+}
+
+/* ================= HERO ================= */
+.hero{text-align:left;padding:13px 2px 14px}
+.idbar{display:flex;align-items:center;gap:13px;text-align:left}
+.idbar .idtext{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center}
+.photo-wrap{position:relative;width:78px;margin:0;flex-shrink:0}
+.photo-wrap::before{content:"";position:absolute;inset:-10px;border-radius:38px;
+  background:radial-gradient(58% 58% at 50% 42%,rgba(34,197,94,.32),transparent 72%);
+  filter:blur(5px);z-index:0}
+.hero-photo{position:relative;z-index:1;width:78px;height:78px;
+  object-fit:cover;object-position:50% 42%;border-radius:22px;display:block;
+  box-shadow:0 22px 46px -20px rgba(18,42,24,.5);
+  outline:1px solid rgba(24,26,24,.06);outline-offset:-1px}
+.name{
+  font-family:var(--font);font-weight:800;font-size:21px;letter-spacing:-.6px;line-height:1.05;
+  color:var(--ink);display:inline-flex;align-items:center;gap:7px;justify-content:flex-start}
+.name .vf{width:19px;height:19px;border-radius:50%;background:var(--green);flex-shrink:0;
+  display:inline-flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 7px -1px rgba(34,197,94,.6)}
+.name .vf svg{width:11px;height:11px;color:#fff}
+.pitch{margin:7px 0 0;font-size:13px;color:var(--ink-2);font-weight:500}
+.pitch b{
+  display:inline-block;font-family:var(--font);font-weight:900;font-size:14px;color:var(--ink);
+  background:var(--green);padding:1px 7px 2px;border-radius:8px;
+  transform:rotate(-1.5deg);line-height:1;box-shadow:0 2px 0 var(--green-deep)}
+
+/* ================= TICKET (CTA Hipobuy) ================= */
+.ticket{
+  position:relative;margin:0 0 9px;
+  background:var(--ink);color:#fff;border-radius:20px;
+  padding:22px 20px 20px;overflow:hidden;
+  box-shadow:0 18px 40px -20px rgba(23,23,27,.7)}
+/* muescas de ticket a los lados */
+.ticket::before,.ticket::after{
+  content:"";position:absolute;top:50%;width:26px;height:26px;
+  background:#F4F4F1;border-radius:50%;transform:translateY(-50%)}
+.ticket::before{left:-14px}
+.ticket::after{right:-14px}
+.ticket-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+.ticket-ey{font-family:var(--font);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#B9B9C4}
+.ticket h2{font-family:var(--font);font-weight:900;font-size:22px;line-height:1.18;margin:12px 0 0;letter-spacing:-.3px}
+.ticket p{font-size:13px;color:#C7C7D0;max-width:280px}
+.ticket .sub{margin-top:10px;line-height:1.35}
+.ticket .dash{border:0;border-top:1.4px dashed #3A3A44;margin:18px 0}
+
+.cta-btn{
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin-top:20px;width:100%;
+  background:var(--green);color:var(--ink);
+  font-family:var(--font);font-weight:800;font-size:15.5px;line-height:1.25;
+  padding:15px;border-radius:13px;text-decoration:none;
+  box-shadow:0 4px 0 var(--green-deep);
+  transition:transform .12s, box-shadow .12s}
+.cta-btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--green-deep)}
+.cta-btn svg{width:17px;height:17px}
+.cta-btn .cta-label{text-align:center;line-height:1.25}
+.cta-btn::after{
+  content:"";position:absolute;top:0;bottom:0;left:-45%;width:34%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:skewX(-18deg);animation:shine 3.4s ease-in-out infinite}
+@keyframes shine{0%{left:-45%}55%,100%{left:140%}}
+
+.codechip{display:block;margin:14px auto 0;background:none;border:0;cursor:pointer;
+  font-family:var(--font);font-size:10.5px;color:#8E8E99;letter-spacing:.3px}
+.codechip b{color:var(--green);font-weight:700;letter-spacing:1px}
+
+/* ================= PASOS ================= */
+.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin:10px 0 20px;list-style:none}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 8px;text-align:center}
+.step .n{
+  font-family:var(--font);font-weight:900;font-size:15px;color:var(--green-deep);
+  width:24px;height:24px;border-radius:50%;background:var(--green-soft);
+  display:flex;align-items:center;justify-content:center;margin:0 auto 8px}
+.step p{font-size:11px;line-height:1.3;color:var(--ink-2);font-weight:500}
+
+/* ================= SECCIONES ================= */
+.eyebrow{
+  font-family:var(--font);font-size:11px;font-weight:400;text-transform:uppercase;
+  letter-spacing:1.5px;color:var(--muted);line-height:1.5;
+  margin:22px 4px 11px;display:flex;align-items:center;gap:8px}
+.eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
+
+/* ================= BOTONES DE ENLACE ================= */
+.link{
+  display:flex;align-items:center;gap:14px;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:15px 16px;margin-bottom:11px;text-decoration:none;color:var(--ink);
+  box-shadow:var(--shadow);
+  transition:transform .12s, border-color .12s}
+.link:active{transform:scale(.985)}
+.link:hover{border-color:var(--ink)}
+.link.featured{border:1.6px solid var(--green)}
+.link .ico{
+  width:42px;height:42px;border-radius:12px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;background:#F3F1EB}
+.link .ico svg{width:21px;height:21px}
+.link .txt{flex:1;min-width:0}
+.link .t{display:block;font-family:var(--font);font-weight:800;font-size:15px;line-height:1.15}
+.link .s{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+.link .arrow{color:var(--muted);flex-shrink:0;transition:transform .12s,color .12s}
+.link:hover .arrow{transform:translateX(3px);color:var(--ink)}
+.link .arrow svg{width:18px;height:18px;display:block}
+
+/* ================= COMUNIDAD (2 columnas) ================= */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.duo .link{margin-bottom:0;flex-direction:column;text-align:center;gap:8px;padding:16px 10px}
+.duo .link .ico{width:38px;height:38px}
+
+/* ================= REDES ================= */
+.socials{display:flex;justify-content:center;gap:13px;margin-top:14px}
+.social{
+  width:52px;height:52px;border-radius:15px;
+  background:var(--card);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;color:var(--ink);
+  box-shadow:var(--shadow);transition:transform .12s,background .12s,color .12s}
+.social:hover{background:var(--ink);color:#fff;transform:translateY(-3px)}
+.social svg{width:23px;height:23px}
+
+/* ================= FOOTER ================= */
+.foot{text-align:center;margin-top:32px;font-size:11px;color:var(--muted);font-family:var(--font)}
+.foot b{color:var(--ink)}
+
+/* ================= ANIMACIÓN DE ENTRADA ================= */
+@media (prefers-reduced-motion:no-preference){
+  .reveal{opacity:0;transform:translateY(10px);animation:up .5s ease forwards}
+  @keyframes up{to{opacity:1;transform:none}}
+}
+.d05{animation-delay:.05s}
+.d10{animation-delay:.1s}
+.d11{animation-delay:.11s}
+.d12{animation-delay:.12s}
+.d14{animation-delay:.14s}
+.d16{animation-delay:.16s}
+.d18{animation-delay:.18s}
+.d20{animation-delay:.2s}
+.d22{animation-delay:.22s}
+.d24{animation-delay:.24s}
+.d26{animation-delay:.26s}
+.d28{animation-delay:.28s}
+
+@media (prefers-reduced-motion:reduce){
+  .cta-btn::after,.tb-btn::after{display:none}
+  .tb-clock.warn,.tb-clock.hot{animation:none}
+}
+
+/* accesibilidad foco */
+a:focus-visible,button:focus-visible{outline:3px solid var(--green-deep);outline-offset:2px;border-radius:8px}
+
+.toast{
+  position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(20px);
+  background:var(--ink);color:#fff;font-family:var(--font);font-size:13px;
+  padding:11px 18px;border-radius:10px;opacity:0;pointer-events:none;
+  transition:.25s;z-index:99}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media (max-width:380px){
+  .idbar .hero-photo,.idbar .photo-wrap{width:70px}
+  .idbar .hero-photo{height:70px}
+}
