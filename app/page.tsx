@@ -70,7 +70,7 @@ export default function Home() {
 
           <hr className="dash" />
 
-          <div className="cta-wrap" id="hero-cta">
+          <div className="cta-wrap">
             <span className="cta-tag">−25% envío</span>
             <Ext className="cta-btn" href={LINKS.hipobuy} event="1_registro_boton">
               <span className="cta-label">

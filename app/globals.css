@@ -53,23 +53,17 @@ body{
 .tb-clock.warn{animation:softpulse 1.6s ease-in-out infinite}
 .tb-clock.hot{color:#FF4D4D;animation:softpulse 1s ease-in-out infinite}
 
-/* Collapsed while the hero CTA is on screen, so the two buttons never compete
-   for the same click; pops in with an overshoot once the hero CTA scrolls
-   out of view — the sudden appearance is what actually catches the eye. */
-.tb-cta{max-height:0;opacity:0;transform:translateY(-6px) scale(.94);overflow:hidden;
-  transition:max-height .4s cubic-bezier(.34,1.4,.64,1),opacity .25s ease,
-             transform .4s cubic-bezier(.34,1.4,.64,1)}
-.tb-cta.show{max-height:64px;opacity:1;transform:none}
-
-/* Top-bar CTA — the single dominant element in the bar once it appears: full-width, high contrast, always glowing */
+/* Top-bar CTA — the single dominant element in the bar: full-width, high contrast, always glowing */
 .tb-btn{position:relative;overflow:hidden;
   display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
   background:var(--green);color:var(--ink);text-decoration:none;
-  font-family:var(--font);font-weight:900;font-size:15px;letter-spacing:-.1px;
-  padding:13px;border-radius:12px;line-height:1.1;
+  font-family:var(--font);text-align:center;
+  padding:12px 13px;border-radius:12px;line-height:1.15;
   box-shadow:0 3px 0 var(--green-deep),0 0 16px -3px rgba(34,197,94,.7);
   animation:tbglow 2.4s ease-in-out infinite;
   transition:transform .12s,box-shadow .12s}
+.tb-btn-label{font-weight:900;font-size:14.5px;letter-spacing:-.1px}
+.tb-btn-sub{display:block;font-weight:600;font-size:11px;opacity:.88;margin-top:2px}
 .tb-btn svg{width:16px;height:16px;flex-shrink:0;transition:transform .12s}
 .tb-btn::after{
   content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;
@@ -100,7 +94,9 @@ body{
   .tb-disc{font-size:14px}
   .tb-msg{font-size:10.5px}
   .tb-clock{font-size:12.5px}
-  .tb-btn{font-size:13.5px;padding:11px}
+  .tb-btn{padding:10px 11px}
+  .tb-btn-label{font-size:13.5px}
+  .tb-btn-sub{font-size:10.5px}
   .tb-btn svg{width:14px;height:14px}
   .tb-50bar b{font-size:10.5px}
 }
@@ -110,7 +106,9 @@ body{
   .tb-disc{font-size:13px}
   .tb-msg{font-size:9.5px;white-space:nowrap}
   .tb-clock{font-size:11.5px}
-  .tb-btn{font-size:13px;padding:10px}
+  .tb-btn{padding:9px 10px}
+  .tb-btn-label{font-size:12.5px}
+  .tb-btn-sub{font-size:10px}
   .tb-50bar{font-size:9px;letter-spacing:0}
   .tb-50bar b{font-size:10px}
 }
@@ -299,7 +297,6 @@ body{
   .cta-btn::after,.tb-btn::after{display:none}
   .tb-clock.warn,.tb-clock.hot{animation:none}
   .cta-btn,.tb-btn{animation:none}
-  .tb-cta{transition:max-height .2s linear,opacity .2s linear;transform:none!important}
 }
 
 /* accesibilidad foco */

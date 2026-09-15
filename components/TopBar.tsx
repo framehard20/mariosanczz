@@ -31,10 +31,6 @@ const two = (n: number) => String(n).padStart(2, "0");
 export function TopBar() {
   const [left, setLeft] = useState<number | null>(null);
   const [scrolled, setScrolled] = useState(false);
-  // True once the hero CTA has scrolled out of view above the viewport: that's
-  // when this bar's own button "arrives" instead of sitting idle the whole time
-  // competing with the hero CTA for the same click.
-  const [pastHero, setPastHero] = useState(false);
 
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout>;
@@ -52,17 +48,6 @@ export function TopBar() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    const heroCta = document.getElementById("hero-cta");
-    if (!heroCta) return;
-    const io = new IntersectionObserver(
-      ([entry]) => setPastHero(!entry.isIntersecting && entry.boundingClientRect.top < 0),
-      { threshold: 0 },
-    );
-    io.observe(heroCta);
-    return () => io.disconnect();
   }, []);
 
   const urgency = left === null ? "" : left <= 3600 ? " hot" : left <= 3 * 3600 ? " warn" : "";
@@ -84,19 +69,19 @@ export function TopBar() {
           </span>
         </div>
 
-        <div className={`tb-cta${pastHero ? " show" : ""}`}>
-          <a
-            className={`tb-btn${urgency}`}
-            href={LINKS.hipobuy}
-            target="_blank"
-            rel="noopener"
-            data-umami-event="1_registro_barra"
-            tabIndex={pastHero ? 0 : -1}
-          >
-            <span className="tb-btn-label">Crear cuenta gratis</span>
-            <ArrowRight />
-          </a>
-        </div>
+        <a
+          className={`tb-btn${urgency}`}
+          href={LINKS.hipobuy}
+          target="_blank"
+          rel="noopener"
+          data-umami-event="1_registro_barra"
+        >
+          <span className="tb-btn-label">
+            Ver la lista de productos
+            <span className="tb-btn-sub">Regístrate gratis · −25% envío</span>
+          </span>
+          <ArrowRight />
+        </a>
 
         <div className="tb-50bar">
           Cupón solo para los <b>primeros 50</b> · ¡Aprovecha!
