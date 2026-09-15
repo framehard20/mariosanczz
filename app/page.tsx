@@ -70,14 +70,21 @@ export default function Home() {
 
           <hr className="dash" />
 
-          <Ext className="cta-btn" href={LINKS.hipobuy} event="1_registro_boton">
-            <span className="cta-label">
-              Crear mi cuenta para ver
-              <br />
-              la LISTA de productos
-            </span>
-            <ArrowRight />
-          </Ext>
+          <div className="cta-wrap">
+            <span className="cta-tag">−25% envío</span>
+            <Ext className="cta-btn" href={LINKS.hipobuy} event="1_registro_boton">
+              <span className="cta-label">
+                Crear cuenta gratis
+                <span className="cta-sub">y activar mi −25% en envío</span>
+              </span>
+              <ArrowRight />
+            </Ext>
+          </div>
+          <ul className="cta-trust">
+            <li><Check /> Gratis</li>
+            <li><Check /> 2 minutos</li>
+            <li><Check /> Sin tarjeta</li>
+          </ul>
           <CopyCode code={INVITE_CODE} />
         </section>
 
@@ -108,6 +115,14 @@ export default function Home() {
           <span className="ico"><Sheet /></span>
           <span className="txt"><span className="t">Lista de outfits</span><span className="s">Los conjuntos ya montados y su precio</span></span>
           <Chevron />
+        </Ext>
+
+        <Ext className="cta-repeat reveal d17" href={LINKS.hipobuy} event="5_registro_repeat">
+          <span className="cta-repeat-txt">
+            <span className="t">¿Ya sabes qué quieres?</span>
+            <span className="s">Crea tu cuenta gratis y actívalo con tu −25% en envío</span>
+          </span>
+          <ArrowRight />
         </Ext>
 
         <Ext className="link reveal d18" href={LINKS.buscador} event="2_buscar_por_foto">
