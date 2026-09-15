@@ -53,7 +53,15 @@ body{
 .tb-clock.warn{animation:softpulse 1.6s ease-in-out infinite}
 .tb-clock.hot{color:#FF4D4D;animation:softpulse 1s ease-in-out infinite}
 
-/* Top-bar CTA — the single dominant element in the bar: full-width, high contrast, always glowing */
+/* Collapsed while the hero CTA is on screen, so the two buttons never compete
+   for the same click; pops in with an overshoot once the hero CTA scrolls
+   out of view — the sudden appearance is what actually catches the eye. */
+.tb-cta{max-height:0;opacity:0;transform:translateY(-6px) scale(.94);overflow:hidden;
+  transition:max-height .4s cubic-bezier(.34,1.4,.64,1),opacity .25s ease,
+             transform .4s cubic-bezier(.34,1.4,.64,1)}
+.tb-cta.show{max-height:64px;opacity:1;transform:none}
+
+/* Top-bar CTA — the single dominant element in the bar once it appears: full-width, high contrast, always glowing */
 .tb-btn{position:relative;overflow:hidden;
   display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
   background:var(--green);color:var(--ink);text-decoration:none;
@@ -291,6 +299,7 @@ body{
   .cta-btn::after,.tb-btn::after{display:none}
   .tb-clock.warn,.tb-clock.hot{animation:none}
   .cta-btn,.tb-btn{animation:none}
+  .tb-cta{transition:max-height .2s linear,opacity .2s linear;transform:none!important}
 }
 
 /* accesibilidad foco */
