@@ -41,45 +41,33 @@ body{
   box-shadow:0 0 0 1.5px rgba(34,197,94,.55),0 0 26px 4px rgba(34,197,94,.62),
              0 0 46px 8px rgba(34,197,94,.30),0 12px 30px -12px rgba(0,0,0,.55);
   animation:glowin .5s ease}
-/* Compact info line: discount + countdown, secondary in size to the CTA below it */
-.tb-info{display:flex;align-items:baseline;flex-wrap:wrap;column-gap:6px;row-gap:2px;
-  margin-bottom:9px;font-family:var(--font);line-height:1}
-.tb-disc{color:var(--green);font-weight:900;font-size:15px;letter-spacing:-.2px}
-.tb-msg{font-size:11.5px;color:#C7C7D0;font-weight:500}
-.tb-sep{color:#55565F;font-size:11px}
-.tb-k{font-size:9.5px;letter-spacing:1px;color:#9A9AA6;text-transform:uppercase}
-.tb-clock{font-weight:900;font-size:13.5px;font-variant-numeric:tabular-nums;
-  color:#FFC940;letter-spacing:.3px;transition:color .4s}
-.tb-clock.warn{animation:softpulse 1.6s ease-in-out infinite}
+.tb-row{display:flex;align-items:stretch;gap:11px}
+.tb-txt{flex:1 1 0;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:1px;line-height:1.25}
+.tb-disc{color:var(--green);font-family:var(--font);font-weight:900;font-size:27px;line-height:.92;letter-spacing:-.5px}
+.tb-msg{font-size:11px;color:#C7C7D0;font-weight:500;line-height:1;margin-top:1px}
+.tb-clockbox{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.38);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:8px 12px;min-width:96px}
+.tb-clockbox .tb-k{font-family:var(--font);font-size:8px;letter-spacing:1.4px;color:#9A9AA6;text-transform:uppercase;margin-bottom:3px}
+.tb-clock{font-family:var(--font);font-weight:900;font-size:21px;font-variant-numeric:tabular-nums;
+  color:#FFC940;letter-spacing:.5px;line-height:1;transition:color .4s}
+.tb-clock.warn{color:#FFC940;animation:softpulse 1.6s ease-in-out infinite}
 .tb-clock.hot{color:#FF4D4D;animation:softpulse 1s ease-in-out infinite}
+.tb-right{flex:1 1 0;display:flex;justify-content:flex-end;align-items:stretch}
 
-/* Top-bar CTA — the single dominant element in the bar: full-width, high contrast, always glowing */
-.tb-btn{position:relative;overflow:hidden;
-  display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
+/* Top-bar CTA — restyled to match the ticket button (shine sweep, arrow, green halo) */
+.tb-btn{position:relative;overflow:hidden;flex-shrink:0;align-self:stretch;
+  display:flex;align-items:center;justify-content:center;gap:6px;
   background:var(--green);color:var(--ink);text-decoration:none;
-  font-family:var(--font);text-align:center;
-  padding:12px 13px;border-radius:12px;line-height:1.15;
+  font-family:var(--font);font-weight:900;font-size:12.5px;letter-spacing:-.1px;
+  padding:0 11px 0 13px;border-radius:12px;white-space:nowrap;text-align:left;line-height:1.1;
   box-shadow:0 3px 0 var(--green-deep),0 0 16px -3px rgba(34,197,94,.7);
-  animation:tbglow 2.4s ease-in-out infinite;
   transition:transform .12s,box-shadow .12s}
-.tb-btn-label{font-weight:900;font-size:14.5px;letter-spacing:-.1px}
-.tb-btn-sub{display:block;font-weight:600;font-size:11px;opacity:.88;margin-top:2px}
-.tb-btn svg{width:16px;height:16px;flex-shrink:0;transition:transform .12s}
+.tb-btn svg{width:14px;height:14px;flex-shrink:0;transition:transform .12s}
 .tb-btn::after{
-  content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;
+  content:"";position:absolute;top:0;bottom:0;left:-60%;width:45%;
   background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);
   transform:skewX(-18deg);animation:shine 3.4s ease-in-out 1.7s infinite}
 .tb-btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--green-deep),0 0 10px -3px rgba(34,197,94,.6)}
-.tb-btn.warn{animation:tbglow 1.5s ease-in-out infinite}
-.tb-btn.hot{animation:tbpulse 1s ease-in-out infinite}
-@keyframes tbglow{
-  0%,100%{box-shadow:0 3px 0 var(--green-deep),0 0 16px -3px rgba(34,197,94,.7)}
-  50%{box-shadow:0 3px 0 var(--green-deep),0 0 24px 1px rgba(34,197,94,.9)}
-}
-@keyframes tbpulse{
-  0%,100%{box-shadow:0 3px 0 var(--green-deep),0 0 16px -3px rgba(34,197,94,.7)}
-  50%{box-shadow:0 3px 0 var(--green-deep),0 0 30px 4px rgba(34,197,94,1)}
-}
 @media (hover:hover){
   .tb-btn:hover svg{transform:translateX(2px)}
 }
@@ -91,24 +79,23 @@ body{
 @keyframes glowin{from{box-shadow:0 12px 30px -12px rgba(0,0,0,.55)}}
 @keyframes softpulse{50%{opacity:.62}}
 @media (max-width:392px){
-  .tb-disc{font-size:14px}
-  .tb-msg{font-size:10.5px}
-  .tb-clock{font-size:12.5px}
-  .tb-btn{padding:10px 11px}
-  .tb-btn-label{font-size:13.5px}
-  .tb-btn-sub{font-size:10.5px}
-  .tb-btn svg{width:14px;height:14px}
+  .tb-clock{font-size:18px}
+  .tb-disc{font-size:23px}
+  .tb-msg{font-size:10px}
+  .tb-btn{font-size:11.5px;padding:0 9px 0 11px;gap:4px}
+  .tb-btn svg{width:12px;height:12px}
   .tb-50bar b{font-size:10.5px}
 }
+/* Bug fix: in the original these compact rules were overridden later in the file,
+   so on ≤360px phones "-25%" collided with the clock and "¡Aprovecha!" was clipped. */
 @media (max-width:360px){
+  .tb-row{gap:8px}
   .topbar-in{padding:11px 10px}
-  .tb-info{column-gap:5px}
-  .tb-disc{font-size:13px}
+  .tb-clockbox{min-width:0;padding:6px 8px}
+  .tb-clock{font-size:16px}
+  .tb-disc{font-size:20px}
   .tb-msg{font-size:9.5px;white-space:nowrap}
-  .tb-clock{font-size:11.5px}
-  .tb-btn{padding:9px 10px}
-  .tb-btn-label{font-size:12.5px}
-  .tb-btn-sub{font-size:10px}
+  .tb-btn{font-size:11px;padding:0 8px 0 10px}
   .tb-50bar{font-size:9px;letter-spacing:0}
   .tb-50bar b{font-size:10px}
 }
