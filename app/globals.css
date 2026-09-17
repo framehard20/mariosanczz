@@ -28,6 +28,7 @@ body{
   -webkit-font-smoothing:antialiased;
   padding:0 16px 44px;
   min-height:100vh;
+  min-height:100dvh; /* mobile browsers resize the viewport as the address bar hides/shows; dvh avoids the resulting jump */
 }
 .wrap{max-width:440px;margin:0 auto;display:block}
 

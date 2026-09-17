@@ -117,27 +117,49 @@ export function Floating3D() {
 
       const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
       let pending = items.length;
+      // A model that never settles (load nor error) would keep `pending` above 0
+      // forever, which — since .ready gates the whole canvas's opacity — would hide
+      // every model, not just the failed one. Each item must settle exactly once.
+      const settle = () => {
+        if (--pending === 0) canvas.classList.add("ready");
+      };
       items.forEach((it) => {
-        loader.load(it.m.src, (gltf) => {
-          if (disposed) return;
-          const model = gltf.scene;
-          const bounds = new THREE.Box3().setFromObject(model);
-          const size = bounds.getSize(new THREE.Vector3());
-          const center = bounds.getCenter(new THREE.Vector3());
-          const scale = it.m.size / Math.max(size.x, size.y, size.z);
-          model.position.copy(center).multiplyScalar(-scale);
-          model.scale.setScalar(scale);
-          it.spin.add(model);
-          const p = anchorPoint(it);
-          if (p) {
-            it.x = p.x;
-            it.y = p.y;
-          }
-          it.ready = true;
-          it.root.visible = true;
-          if (--pending === 0) canvas.classList.add("ready");
-          wake();
-        });
+        const attempt = (retriesLeft: number) => {
+          loader.load(
+            it.m.src,
+            (gltf) => {
+              if (disposed) return;
+              const model = gltf.scene;
+              const bounds = new THREE.Box3().setFromObject(model);
+              const size = bounds.getSize(new THREE.Vector3());
+              const center = bounds.getCenter(new THREE.Vector3());
+              const scale = it.m.size / Math.max(size.x, size.y, size.z);
+              model.position.copy(center).multiplyScalar(-scale);
+              model.scale.setScalar(scale);
+              it.spin.add(model);
+              const p = anchorPoint(it);
+              if (p) {
+                it.x = p.x;
+                it.y = p.y;
+              }
+              it.ready = true;
+              it.root.visible = true;
+              settle();
+              wake();
+            },
+            undefined,
+            (err) => {
+              if (disposed) return;
+              if (retriesLeft > 0) {
+                setTimeout(() => attempt(retriesLeft - 1), 800);
+              } else {
+                console.error(`[Floating3D] giving up on ${it.m.src}`, err);
+                settle(); // don't let one dead model hide the ones that loaded fine
+              }
+            },
+          );
+        };
+        attempt(2);
       });
 
       // ---- scroll: models trail their anchor a little and spin with scroll speed
