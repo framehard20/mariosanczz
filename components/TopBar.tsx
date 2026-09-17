@@ -59,34 +59,30 @@ export function TopBar() {
   return (
     <div className={`topbar${scrolled ? " scrolled" : ""}`}>
       <div className="topbar-in">
-        <div className="tb-row">
-          <div className="tb-txt">
-            <span className="tb-disc">−25%</span>
-            <div className="tb-msg">Dto. en envío</div>
-          </div>
-          <div className="tb-clockbox">
-            <span className="tb-k">Acaba en</span>
-            <span className={`tb-clock${urgency}`} role="timer">
-              {label}
-            </span>
-          </div>
-          <div className="tb-right">
-            <a
-              className="tb-btn"
-              href={LINKS.hipobuy}
-              target="_blank"
-              rel="noopener"
-              data-umami-event="1_registro_barra"
-            >
-              <span className="tb-btn-label">
-                Crear
-                <br />
-                cuenta
-              </span>
-              <ArrowRight />
-            </a>
-          </div>
+        <div className="tb-info">
+          <span className="tb-disc">−25%</span>
+          <span className="tb-msg">dto. en envío</span>
+          <span className="tb-sep">·</span>
+          <span className="tb-k">Acaba en</span>
+          <span className={`tb-clock${urgency}`} role="timer">
+            {label}
+          </span>
         </div>
+
+        <a
+          className={`tb-btn${urgency}`}
+          href={LINKS.hipobuy}
+          target="_blank"
+          rel="noopener"
+          data-umami-event="1_registro_barra"
+        >
+          <span className="tb-btn-label">
+            Ver la lista de productos
+            <span className="tb-btn-sub">Regístrate gratis · −25% envío</span>
+          </span>
+          <ArrowRight />
+        </a>
+
         <div className="tb-50bar">
           Cupón solo para los <b>primeros 50</b> · ¡Aprovecha!
         </div>
