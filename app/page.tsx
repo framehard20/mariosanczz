@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Floating3D } from "@/components/Floating3D";
 import { CopyCode } from "@/components/CopyCode";
 import { TopBar } from "@/components/TopBar";
 import {
@@ -61,7 +62,7 @@ export default function Home() {
         </header>
 
         {/* ================= TICKET / CTA HIPOBUY ================= */}
-        <section className="ticket reveal d05">
+        <section className="ticket reveal d05" data-3d="sneaker">
           <div className="ticket-top">
             <span className="ticket-ey">Empieza aquí</span>
           </div>
@@ -103,7 +104,7 @@ export default function Home() {
         </Ext>
 
         {/* ================= ENLACES PRINCIPALES ================= */}
-        <h3 className="eyebrow reveal d12">Listas de compra</h3>
+        <h3 className="eyebrow reveal d12" data-3d="pants">Listas de compra</h3>
 
         <Ext className="link featured reveal d14" href={LINKS.productos} event="2_lista_productos">
           <span className="ico"><Sheet /></span>
@@ -147,7 +148,7 @@ export default function Home() {
 
         {/* ================= REDES ================= */}
         <h3 className="eyebrow reveal d24">Sígueme</h3>
-        <div className="socials reveal d26">
+        <div className="socials reveal d26" data-3d="shirt">
           <Ext className="social" href={LINKS.instagram} event="4_instagram" label="Instagram"><Instagram /></Ext>
           <Ext className="social" href={LINKS.tiktok} event="4_tiktok" label="TikTok"><TikTok /></Ext>
           <Ext className="social" href={LINKS.youtube} event="4_youtube" label="YouTube"><YouTube /></Ext>
@@ -157,6 +158,8 @@ export default function Home() {
           Hecho por <b>{HANDLE}</b> + <b>{INVITE_CODE}</b>
         </footer>
       </main>
+
+      <Floating3D />
     </>
   );
 }

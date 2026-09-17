@@ -5,13 +5,14 @@ const isDev = process.env.NODE_ENV !== "production";
 // The page has no user input and no server code, so 'unsafe-inline' for scripts
 // (needed by Next's hydration payload on a statically rendered page) is an
 // acceptable trade-off; everything else is locked to this origin + Umami.
+// 'wasm-unsafe-eval' + blob: are for the 3D viewer (meshopt WASM decoder, embedded GLB textures).
 const csp = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline' https://cloud.umami.is${isDev ? " 'unsafe-eval'" : ""}`,
+  `script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cloud.umami.is${isDev ? " 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
   "font-src 'self'",
-  `connect-src 'self' https://cloud.umami.is https://gateway.umami.is${isDev ? " ws:" : ""}`,
+  `connect-src 'self' blob: https://cloud.umami.is https://gateway.umami.is${isDev ? " ws:" : ""}`,
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
