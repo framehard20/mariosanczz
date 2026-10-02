@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Floating3D } from "@/components/Floating3D";
 import { CopyCode } from "@/components/CopyCode";
 import { TopBar } from "@/components/TopBar";
+import { XmasNotice } from "@/components/XmasNotice";
 import {
   ArrowRight,
   Check,
@@ -17,6 +18,7 @@ import {
 } from "@/components/icons";
 import { HANDLE, INVITE_CODE, LINKS } from "@/lib/site";
 import photo from "@/assets/mariosanczz.jpg";
+import flayfindLogo from "@/assets/flayfind.png";
 
 type ExtProps = {
   href: string;
@@ -68,6 +70,7 @@ export default function Home() {
           </div>
           <h2>Compra ropa en el mercado chino</h2>
           <p className="sub">Accede a Hipobuy, donde consigo los outfits de los vídeos.</p>
+          <XmasNotice />
 
           <hr className="dash" />
 
@@ -96,29 +99,22 @@ export default function Home() {
           <li className="step"><div className="n">3</div><p>Recíbelo en casa</p></li>
         </ol>
 
-        {/* ================= VÍDEO CÓMO COMPRAR ================= */}
-        <Ext className="link reveal d11" href={LINKS.comoComprar} event="2_video_tutorial">
-          <span className="ico"><YouTubePlay /></span>
-          <span className="txt"><span className="t">¿No sabes comprar? Míralo aquí</span><span className="s">Apréndelo en unos minutos</span></span>
-          <Chevron />
-        </Ext>
+        {/* ================= PROVEEDORES ================= */}
+        <h3 className="eyebrow reveal d11" data-3d="pants">Proveedores</h3>
 
-        {/* ================= ENLACES PRINCIPALES ================= */}
-        <h3 className="eyebrow reveal d12" data-3d="pants">Listas de compra</h3>
-
-        <Ext className="link featured reveal d14" href={LINKS.productos} event="2_lista_productos">
+        <Ext className="link featured reveal d12" href={LINKS.productos} event="2_lista_productos">
           <span className="ico"><Sheet /></span>
           <span className="txt"><span className="t">Lista de productos</span><span className="s">Todas las prendas con su enlace de compra</span></span>
           <Chevron />
         </Ext>
 
-        <Ext className="link reveal d16" href={LINKS.outfits} event="2_lista_outfits">
-          <span className="ico"><Sheet /></span>
-          <span className="txt"><span className="t">Lista de outfits</span><span className="s">Los conjuntos ya montados y su precio</span></span>
+        <Ext className="link reveal d14" href={LINKS.outfits} event="2_lista_outfits">
+          <span className="ico"><Image src={flayfindLogo} alt="" width={24} height={24} /></span>
+          <span className="txt"><span className="t">Lista de outfits <span className="by">Flayfind</span></span><span className="s">Los conjuntos ya montados y su precio</span></span>
           <Chevron />
         </Ext>
 
-        <Ext className="cta-repeat reveal d17" href={LINKS.hipobuy} event="5_registro_repeat">
+        <Ext className="cta-repeat reveal d16" href={LINKS.hipobuy} event="5_registro_repeat">
           <span className="cta-repeat-txt">
             <span className="t">¿Ya sabes qué quieres?</span>
             <span className="s">Crea tu cuenta gratis y actívalo con tu −25% en envío</span>
@@ -126,23 +122,29 @@ export default function Home() {
           <ArrowRight />
         </Ext>
 
-        <Ext className="link reveal d18" href={LINKS.buscador} event="2_buscar_por_foto">
+        {/* ================= AYUDA / COMUNIDAD ================= */}
+        <h3 className="eyebrow reveal d17">¿Tienes dudas? Háblame aquí</h3>
+
+        <Ext className="link reveal d18" href={LINKS.comoComprar} event="2_video_tutorial">
+          <span className="ico"><YouTubePlay /></span>
+          <span className="txt"><span className="t">¿No sabes comprar? Míralo aquí</span><span className="s">Apréndelo en unos minutos</span></span>
+          <Chevron />
+        </Ext>
+
+        <Ext className="link reveal d20" href={LINKS.buscador} event="2_buscar_por_foto">
           <span className="ico"><Search /></span>
           <span className="txt"><span className="t">¿Buscas otra prenda? Búscala por foto</span><span className="s">Mándame la foto y te paso el link</span></span>
           <Chevron />
         </Ext>
 
-        {/* ================= COMUNIDAD ================= */}
-        <h3 className="eyebrow reveal d20">¿Tienes dudas? Háblame aquí</h3>
-
         <div className="duo reveal d22">
-          <Ext className="link" href={LINKS.discord} event="3_discord">
-            <span className="ico"><Discord /></span>
-            <span className="txt"><span className="t">Discord</span></span>
-          </Ext>
           <Ext className="link" href={LINKS.telegram} event="3_telegram">
             <span className="ico"><Telegram /></span>
             <span className="txt"><span className="t">Telegram</span></span>
+          </Ext>
+          <Ext className="link" href={LINKS.discord} event="3_discord">
+            <span className="ico"><Discord /></span>
+            <span className="txt"><span className="t">Discord</span></span>
           </Ext>
         </div>
 

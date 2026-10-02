@@ -20,7 +20,7 @@ type Placement = {
 
 const MODELS: Placement[] = [
   { src: "/models/sneaker.glb", anchor: "sneaker", ax: 1, ay: 0, dx: -60, dy: 16, size: 110, yaw: -0.6, tilt: 0.35 },
-  { src: "/models/cargo-pants.glb", anchor: "pants", ax: 1, ay: 0.5, dx: -22, dy: -4, size: 104, yaw: 0.5, tilt: 0.12 },
+  { src: "/models/cargo-pants.glb", anchor: "pants", ax: 1, ay: 0.5, dx: 4, dy: 18, size: 104, yaw: 0.5, tilt: 0.12 },
   { src: "/models/shirt.glb", anchor: "shirt", ax: 0, ay: 0.5, dx: 44, dy: 8, size: 96, yaw: -0.4, tilt: 0.1 },
 ];
 

@@ -23,6 +23,10 @@ export const LINKS = {
   youtube: "https://www.youtube.com/@mariosanczz",
 } as const;
 
+// 🎄 Último día para pedir y que llegue a tiempo por Navidad, formato "AAAA-MM-DD"
+// (p.ej. "2026-12-05"). Vacío = no se muestra el aviso. Pasada la fecha se oculta solo.
+export const NAVIDAD_LIMITE = "";
+
 // Umami (analítica gratis y sin cookies). Deja websiteId vacío para desactivarla.
 // Si cambias de proveedor, actualiza también la CSP en next.config.ts.
 export const UMAMI = {
