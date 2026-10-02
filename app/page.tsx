@@ -100,7 +100,10 @@ export default function Home() {
         </ol>
 
         {/* ================= PROVEEDORES ================= */}
-        <h3 className="eyebrow reveal d11" data-3d="pants">Proveedores</h3>
+        <div className="sec-head reveal d11" data-3d="pants">
+          <h3>Proveedores</h3>
+          <p>La ropa de mis vídeos, con su enlace de compra</p>
+        </div>
 
         <Ext className="link featured reveal d12" href={LINKS.productos} event="2_lista_productos">
           <span className="ico"><Sheet /></span>

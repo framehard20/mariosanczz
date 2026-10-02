@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Placement = {
   src: string;
@@ -20,7 +20,7 @@ type Placement = {
 
 const MODELS: Placement[] = [
   { src: "/models/sneaker.glb", anchor: "sneaker", ax: 1, ay: 0, dx: -60, dy: 16, size: 110, yaw: -0.6, tilt: 0.35 },
-  { src: "/models/cargo-pants.glb", anchor: "pants", ax: 1, ay: 0.5, dx: 4, dy: 18, size: 104, yaw: 0.5, tilt: 0.12 },
+  { src: "/models/cargo-pants.glb", anchor: "pants", ax: 1, ay: 0.5, dx: -26, dy: -2, size: 104, yaw: 0.5, tilt: 0.12 },
   { src: "/models/shirt.glb", anchor: "shirt", ax: 0, ay: 0.5, dx: 44, dy: 8, size: 96, yaw: -0.4, tilt: 0.1 },
 ];
 
@@ -36,27 +36,45 @@ const damp = (from: number, to: number, lambda: number, dt: number) =>
  */
 export function Floating3D() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  // Bumping this remounts the <canvas> (see `key` below), and a brand-new canvas gets a
+  // brand-new WebGL context. Retrying on the old canvas instead just hits the same dead
+  // context: getContext() keeps returning it until the browser restores it, which it
+  // only does once the page is visible again.
+  const [generation, setGeneration] = useState(0);
+  const failures = useRef(0);
 
   useEffect(() => {
     const canvas = canvasRef.current!;
     let disposed = false;
     let cleanup = () => {};
-    let restartTimer: ReturnType<typeof setTimeout> | undefined;
+    let retryTimer: ReturnType<typeof setTimeout> | undefined;
+    let stopWaiting = () => {};
 
-    // Phones lose WebGL contexts far more often than desktops (memory pressure,
-    // backgrounding the tab/app), and this component never used to handle that at
-    // all — a lost context just left a permanently blank canvas. `restart()` tears
-    // everything down and reinitializes from scratch, which is the only recovery
-    // that's guaranteed correct regardless of what state the context died in.
-    const restart = (delay: number) => {
-      cleanup();
-      cleanup = () => {};
-      if (disposed) return;
-      clearTimeout(restartTimer);
-      restartTimer = setTimeout(() => start(0), delay);
+    const remount = () => {
+      if (!disposed) setGeneration((g) => g + 1);
     };
 
-    const start = async (attempt: number) => {
+    // Phones lose WebGL contexts far more often than desktops (memory pressure,
+    // backgrounding the tab/app), and while the GPU is unavailable a new one can't be
+    // created either. Back off a few times, then wait for the page to be shown again
+    // rather than giving up for good, which left a blank canvas until a full reload.
+    const retryLater = () => {
+      failures.current++;
+      if (failures.current <= 3) {
+        retryTimer = setTimeout(remount, 1000 * failures.current);
+        return;
+      }
+      const onVisible = () => {
+        if (document.visibilityState !== "visible") return;
+        stopWaiting();
+        failures.current = 0;
+        remount();
+      };
+      document.addEventListener("visibilitychange", onVisible);
+      stopWaiting = () => document.removeEventListener("visibilitychange", onVisible);
+    };
+
+    const start = async () => {
       let renderer: import("three").WebGLRenderer;
       try {
         const THREE = await import("three");
@@ -78,8 +96,9 @@ export function Floating3D() {
 
         const onContextLost = (e: Event) => {
           e.preventDefault();
-          canvas.classList.remove("ready");
-          restart(500);
+          cleanup();
+          cleanup = () => {};
+          retryLater();
         };
         canvas.addEventListener("webglcontextlost", onContextLost, false);
 
@@ -148,7 +167,9 @@ export function Floating3D() {
         // forever, which — since .ready gates the whole canvas's opacity — would hide
         // every model, not just the failed one. Each item must settle exactly once.
         const settle = () => {
-          if (--pending === 0) canvas.classList.add("ready");
+          if (--pending > 0) return;
+          canvas.classList.add("ready");
+          failures.current = 0;
         };
         items.forEach((it) => {
           const attempt = (retriesLeft: number) => {
@@ -291,7 +312,9 @@ export function Floating3D() {
 
         const frame = (now: number) => {
           raf = 0;
-          const dt = Math.min(0.05, (now - prev) / 1000);
+          // A rAF timestamp is the frame's start time, which can be earlier than the
+          // performance.now() taken in wake(), so dt can come out negative.
+          const dt = clamp((now - prev) / 1000, 0, 0.05);
           prev = now;
           elapsed += dt;
           let active = false;
@@ -308,7 +331,8 @@ export function Floating3D() {
             }
 
             const onScreen = it.y > -it.m.size && it.y < vh + it.m.size;
-            it.appear = reduced ? (onScreen ? 1 : 0) : damp(it.appear, onScreen ? 1 : 0, 5, dt);
+            const appearTarget = onScreen ? 1 : 0;
+            it.appear = reduced ? appearTarget : damp(it.appear, appearTarget, 5, dt);
 
             it.yaw += it.yawVel * dt;
             it.yawVel = damp(it.yawVel, 0, 2.2, dt);
@@ -321,9 +345,14 @@ export function Floating3D() {
             it.root.visible = it.appear > 0.01;
             it.spin.rotation.set(it.pitch, it.yaw + (reduced ? 0 : Math.sin(elapsed * 0.7 + it.phase) * 0.25), float * 0.04, "YXZ");
 
+            // Keep running until a fade in/out has finished, not just while the model is
+            // visible: a first frame with a tiny dt leaves `appear` just under the 0.01
+            // visibility cut-off, and if that alone stopped the loop the model stayed
+            // invisible until something else (a scroll, a tap) happened to wake it.
             if (
-              it.root.visible &&
-              (!reduced || drag?.it === it || Math.abs(it.x - p.x) + Math.abs(it.y - p.y) > 0.5 || Math.abs(it.yawVel) > 0.01)
+              Math.abs(it.appear - appearTarget) > 0.001 ||
+              (it.root.visible &&
+                (!reduced || drag?.it === it || Math.abs(it.x - p.x) + Math.abs(it.y - p.y) > 0.5 || Math.abs(it.yawVel) > 0.01))
             )
               active = true;
           }
@@ -378,25 +407,23 @@ export function Floating3D() {
       } catch (err) {
         // Context creation itself can fail under memory pressure (common on phones).
         console.error("[Floating3D] init failed", err);
-        if (!disposed && attempt < 3) {
-          clearTimeout(restartTimer);
-          restartTimer = setTimeout(() => start(attempt + 1), 1000 * (attempt + 1));
-        }
+        if (!disposed) retryLater();
       }
     };
 
     // Don't compete with the first paint: start once the browser is idle.
     const idle = window.requestIdleCallback ?? ((cb: () => void) => setTimeout(cb, 300));
     const cancelIdle = window.cancelIdleCallback ?? clearTimeout;
-    const handle = idle(() => start(0), { timeout: 1500 });
+    const handle = idle(() => start(), { timeout: 1500 });
 
     return () => {
       disposed = true;
-      clearTimeout(restartTimer);
+      clearTimeout(retryTimer);
+      stopWaiting();
       cancelIdle(handle);
       cleanup();
     };
-  }, []);
+  }, [generation]);
 
-  return <canvas ref={canvasRef} className="f3d" aria-hidden="true" />;
+  return <canvas key={generation} ref={canvasRef} className="f3d" aria-hidden="true" />;
 }

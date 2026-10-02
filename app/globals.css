@@ -234,6 +234,11 @@ body{
   letter-spacing:1.5px;color:var(--muted);line-height:1.5;
   margin:22px 4px 11px;display:flex;align-items:center;gap:8px}
 .eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
+/* Cabecera de sección destacada (Proveedores). El padding derecho deja hueco al modelo 3D. */
+.sec-head{margin:24px 4px 12px;padding-right:72px}
+.sec-head h3{display:flex;align-items:center;gap:8px;font-family:var(--font);font-weight:900;font-size:19px;letter-spacing:-.3px;line-height:1.15;color:var(--ink)}
+.sec-head h3::before{content:"";width:4px;height:17px;border-radius:2px;background:var(--green)}
+.sec-head p{margin-top:4px;font-size:12.5px;line-height:1.35;color:var(--muted)}
 
 /* ================= BOTONES DE ENLACE ================= */
 .link{
