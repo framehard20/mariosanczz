@@ -15,8 +15,8 @@ export const LINKS = {
   productos:
     "https://docs.google.com/spreadsheets/d/17WHP0zYLfmwC9NZ9itCUNSPT9ymWnxT6qIXDKgO09Cs/edit?gid=1281688000#gid=1281688000",
   comoComprar: "https://youtu.be/TY7p0an6uL0",
-  buscador: "https://discord.gg/yjmnbxsQMk",
-  discord: "https://discord.gg/yjmnbxsQMk",
+  buscador: "https://discord.gg/BUrt9M2dyS",
+  discord: "https://discord.gg/BUrt9M2dyS",
   telegram: "https://t.me/addlist/gdNCnbOv_Q85NTNk",
   instagram: "https://www.instagram.com/mariosanczz/",
   tiktok: "https://www.tiktok.com/@mariosanczz_",
