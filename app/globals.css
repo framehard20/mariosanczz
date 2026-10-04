@@ -239,6 +239,22 @@ body{
 .sec-head h3{display:flex;align-items:center;gap:8px;font-family:var(--font);font-weight:900;font-size:19px;letter-spacing:-.3px;line-height:1.15;color:var(--ink)}
 .sec-head h3::before{content:"";width:4px;height:17px;border-radius:2px;background:var(--green)}
 .sec-head p{margin-top:4px;font-size:12.5px;line-height:1.35;color:var(--muted)}
+.eyebrow svg{width:13px;height:13px;flex-shrink:0}
+
+/* ================= IDIOMA ================= */
+/* Globe pill under the pitch: the visible cue that the page comes in other languages. */
+.lang-chip-wrap{margin-top:11px}
+.lang-chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--font);font-size:12px;font-weight:700;color:var(--ink-2);background:var(--card);border:1px solid var(--line);border-radius:100px;padding:5px 10px 5px 8px;cursor:pointer;box-shadow:var(--shadow);transition:border-color .15s}
+.lang-chip:hover{border-color:var(--ink)}
+.lang-chip svg{width:14px;height:14px;flex-shrink:0}
+.lang-chip .lang-chip-caret{width:11px;height:11px;color:var(--muted);transition:transform .15s}
+.lang-chip[aria-expanded="true"] .lang-chip-caret{transform:rotate(180deg)}
+.lang-panel{margin-top:10px}
+.lang-list{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.lang-list button{font-family:var(--font);font-size:12.5px;font-weight:700;color:var(--ink);background:#F0F1F3;border:1px solid var(--line);border-radius:100px;padding:8px 14px;cursor:pointer;transition:background .12s,border-color .12s}
+.lang-list button:hover{border-color:var(--ink)}
+.lang-list button[aria-pressed="true"]{background:var(--green);border-color:var(--green-deep);box-shadow:0 2px 0 var(--green-deep)}
+.lang-sec .lang-list{justify-content:center}
 
 /* ================= BOTONES DE ENLACE ================= */
 .link{

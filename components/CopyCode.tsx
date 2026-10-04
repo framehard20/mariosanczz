@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { T, useLang } from "./Lang";
 
 declare global {
   interface Window {
@@ -32,6 +33,7 @@ async function copyText(text: string): Promise<boolean> {
 }
 
 export function CopyCode({ code }: { code: string }) {
+  const { t } = useLang();
   const [mounted, setMounted] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const [visible, setVisible] = useState(false);
@@ -44,7 +46,7 @@ export function CopyCode({ code }: { code: string }) {
 
   async function onClick() {
     const ok = await copyText(code);
-    setToast(ok ? `Código ${code} copiado ✓` : `Tu código: ${code}`);
+    setToast(t(ok ? "code.copied" : "code.yours", { code }));
     setVisible(true);
     clearTimeout(timer.current);
     timer.current = setTimeout(() => setVisible(false), 1800);
@@ -54,7 +56,7 @@ export function CopyCode({ code }: { code: string }) {
   return (
     <>
       <button type="button" className="codechip" onClick={onClick}>
-        Código <b>{code}</b> ya aplicado ✓
+        <T k="code.chip" vars={{ code }} />
       </button>
       {/* Portal: .reveal applies a transform, which would trap a position:fixed toast inside the ticket */}
       {mounted &&

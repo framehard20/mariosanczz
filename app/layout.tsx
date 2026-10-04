@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { LangProvider } from "@/components/Lang";
 import { HANDLE, INVITE_CODE, UMAMI } from "@/lib/site";
 import "./globals.css";
 
@@ -23,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es">
       <body>
-        {children}
+        <LangProvider>{children}</LangProvider>
         {process.env.NODE_ENV === "production" && UMAMI.websiteId && (
           <Script src={UMAMI.src} data-website-id={UMAMI.websiteId} strategy="afterInteractive" />
         )}

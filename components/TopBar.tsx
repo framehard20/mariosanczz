@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { LINKS } from "@/lib/site";
 import { ArrowRight } from "./icons";
+import { bold, useLang } from "./Lang";
 
 const HALF_DAY = 12 * 3600;
 
@@ -29,6 +30,7 @@ function secondsLeft(now: Date): number {
 const two = (n: number) => String(n).padStart(2, "0");
 
 export function TopBar() {
+  const { t } = useLang();
   const [left, setLeft] = useState<number | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
@@ -61,9 +63,9 @@ export function TopBar() {
       <div className="topbar-in">
         <div className="tb-info">
           <span className="tb-disc">−25%</span>
-          <span className="tb-msg">dto. en envío</span>
+          <span className="tb-msg">{t("tb.msg")}</span>
           <span className="tb-sep">·</span>
-          <span className="tb-k">Acaba en</span>
+          <span className="tb-k">{t("tb.ends")}</span>
           <span className={`tb-clock${urgency}`} role="timer">
             {label}
           </span>
@@ -77,15 +79,13 @@ export function TopBar() {
           data-umami-event="1_registro_barra"
         >
           <span className="tb-btn-label">
-            Ver la lista de productos
-            <span className="tb-btn-sub">Regístrate gratis · −25% envío</span>
+            {t("tb.btn")}
+            <span className="tb-btn-sub">{t("tb.btnSub")}</span>
           </span>
           <ArrowRight />
         </a>
 
-        <div className="tb-50bar">
-          Cupón solo para los <b>primeros 50</b> · ¡Aprovecha!
-        </div>
+        <div className="tb-50bar">{bold(t("tb.50"))}</div>
       </div>
     </div>
   );
