@@ -21,7 +21,6 @@ export const de = {
   "ladder.3": "−20 % Versand",
   "ladder.4": "−25 % Versand",
   "ladder.note": "Das sind **Versand**-Gutscheine, kein Rabatt auf die Ware.",
-  "ticket.first": "Erst das Konto. Ohne Konto kannst du nichts aus der Liste kaufen.",
   "step.1": "Konto erstellen",
   "step.2": "Outfit auswählen",
   "step.3": "Nach Hause liefern lassen",

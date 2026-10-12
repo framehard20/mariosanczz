@@ -28,7 +28,6 @@ export const es = {
 
 
 
-  "ticket.first": "Primero la cuenta. Sin ella no puedes comprar nada de la lista.",
   "step.1": "Crea tu cuenta",
   "step.2": "Elige tu outfit",
   "step.3": "Recíbelo en casa",

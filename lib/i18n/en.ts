@@ -21,7 +21,6 @@ export const en = {
   "ladder.3": "−20% shipping",
   "ladder.4": "−25% shipping",
   "ladder.note": "These are **shipping** coupons, not money off the product.",
-  "ticket.first": "Account first. Without one you cannot buy anything from the list.",
   "step.1": "Create your account",
   "step.2": "Pick your outfit",
   "step.3": "Get it delivered",

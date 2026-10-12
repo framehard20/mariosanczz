@@ -364,7 +364,3 @@ html.f3d-grabbing,html.f3d-grabbing *{cursor:grabbing!important;user-select:none
 .ticket-video svg:first-child{width:18px;height:18px;color:#FF4D4D}
 .ticket-video svg:last-child{width:15px;height:15px;margin-left:auto;opacity:.5}
 .ticket-video:active{background:rgba(255,255,255,.1)}
-
-/* La cuenta va antes de comprar: se dice junto al botón y en la fila de la lista */
-.first-note{margin:9px 0 0;text-align:center;font-size:11.5px;font-weight:600;
-  color:#C7C7D0;line-height:1.45}
