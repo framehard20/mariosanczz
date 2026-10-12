@@ -199,7 +199,7 @@ body{
 .cta-trust li{display:flex;align-items:center;gap:4px;font-size:11px;color:#B9B9C4;font-weight:600}
 .cta-trust svg{width:11px;height:11px;color:var(--green);flex-shrink:0}
 
-.codechip{display:block;margin:12px auto 0;background:none;border:0;cursor:pointer;
+.codechip{display:block;margin:12px auto 0;text-align:center;
   font-family:var(--font);font-size:10.5px;color:#8E8E99;letter-spacing:.3px}
 .codechip b{color:var(--green);font-weight:700;letter-spacing:1px}
 
@@ -244,7 +244,7 @@ body{
 
 /* ================= IDIOMA ================= */
 /* Globe pill under the pitch: the visible cue that the page comes in other languages. */
-.lang-chip-wrap{margin-top:11px}
+.lang-chip-wrap{margin-top:5px}
 .lang-chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--font);font-size:12px;font-weight:700;color:var(--ink-2);background:var(--card);border:1px solid var(--line);border-radius:100px;padding:5px 10px 5px 8px;cursor:pointer;box-shadow:var(--shadow);transition:border-color .15s}
 .lang-chip:hover{border-color:var(--ink)}
 .lang-chip svg{width:14px;height:14px;flex-shrink:0}
