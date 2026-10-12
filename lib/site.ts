@@ -10,9 +10,10 @@ export const HANDLE = "mariosanczz";
 export const INVITE_CODE = "YILTEC";
 
 // Gente ya registrada con el código. Es la prueba social de la barra de arriba
-// y sustituye al contador falso: sube este número cuando lo veas en Hipobuy,
-// y deja siempre uno que puedas demostrar.
-export const REGISTRADOS = 200;
+// y sustituye al contador falso. Redondea siempre HACIA ABAJO respecto al
+// "Total" del panel de Hipobuy, para que el "+" sea verdad y no haga falta
+// tocarlo cada semana. Panel a 12 oct 2026: 1.177 en total, asi que "+1.000" va sobrado.
+export const REGISTRADOS = 1000;
 
 export const LINKS = {
   hipobuy: `https://hipobuy.com/register?inviteCode=${INVITE_CODE}`,

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { LINKS, REGISTRADOS } from "@/lib/site";
 import { ArrowRight } from "./icons";
+import { localeOf } from "@/lib/i18n";
 import { useLang } from "./Lang";
 
 // Sticky offer bar. It used to carry a countdown that rolled over every twelve
@@ -12,7 +13,7 @@ import { useLang } from "./Lang";
 // people have already registered.
 
 export function TopBar() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -29,7 +30,7 @@ export function TopBar() {
           <span className="tb-disc">4</span>
           <span className="tb-msg">{t("tb.msg")}</span>
           <span className="tb-sep">·</span>
-          <span className="tb-proof">{t("tb.proof", { n: REGISTRADOS })}</span>
+          <span className="tb-proof">{t("tb.proof", { n: REGISTRADOS.toLocaleString(localeOf(lang)) })}</span>
         </div>
 
         <a
