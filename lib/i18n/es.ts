@@ -10,6 +10,7 @@ export const es = {
   "ticket.ey": "Empieza aquí",
   "ticket.title": "Compra ropa en el mercado chino",
   "ticket.sub": "Hipobuy es un agente de compras: te compra la ropa en China y te la manda a casa. Es donde consigo los outfits de los vídeos.",
+  "ticket.video": "Mira cómo se compra, paso a paso",
   "cta.tag": "4 cupones de envío",
   "cta.label": "Crear cuenta gratis",
   "cta.sub": "y coger mis 4 cupones de envío",
@@ -25,10 +26,8 @@ export const es = {
   "ladder.4": "−25% de envío",
   "ladder.note": "Son cupones de **envío**, no del producto.",
 
-  "heads.title": "Antes de que le des:",
-  "heads.body": "La web de Hipobuy está **en inglés**. Son 4 casillas (email y contraseña) y menos de un minuto. Mi código ya va puesto.",
 
-  "disclosure": "Gano una comisión si creas tu cuenta con mi código. A ti no te cuesta nada más y los cupones son tuyos.",
+  "disclosure": "Gano una comisión con mi código. A ti no te cuesta nada más.",
 
   "step.1": "Crea tu cuenta",
   "step.2": "Elige tu outfit",
@@ -44,8 +43,6 @@ export const es = {
   "repeat.s": "Crea tu cuenta gratis y coge tus 4 cupones de envío",
 
   "help.title": "¿Tienes dudas? Háblame aquí",
-  "video.t": "¿No sabes comprar? Míralo aquí",
-  "video.s": "Apréndelo en unos minutos",
   "foto.t": "¿Buscas otra prenda? Búscala por foto",
   "foto.s": "Mándame la foto por Discord y te paso el link",
 

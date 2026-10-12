@@ -72,6 +72,11 @@ export default function Home() {
           </div>
           <h2><T k="ticket.title" /></h2>
           <p className="sub"><T k="ticket.sub" /></p>
+          <Ext className="ticket-video" href={LINKS.comoComprar} event="2_video_tutorial">
+            <YouTubePlay />
+            <T k="ticket.video" />
+            <Chevron />
+          </Ext>
           <XmasNotice />
 
           <hr className="dash" />
@@ -103,11 +108,6 @@ export default function Home() {
           <p className="disclosure"><T k="disclosure" /></p>
           <p className="codechip"><T k="code.chip" vars={{ code: INVITE_CODE }} /></p>
         </section>
-
-        <div className="heads reveal d08">
-          <b><T k="heads.title" /></b>
-          <span><T k="heads.body" /></span>
-        </div>
 
         {/* ================= 3 PASOS ================= */}
         <ol className="steps reveal d10">
@@ -144,12 +144,6 @@ export default function Home() {
 
         {/* ================= AYUDA / COMUNIDAD ================= */}
         <h3 className="eyebrow reveal d17"><T k="help.title" /></h3>
-
-        <Ext className="link reveal d18" href={LINKS.comoComprar} event="2_video_tutorial">
-          <span className="ico"><YouTubePlay /></span>
-          <span className="txt"><span className="t"><T k="video.t" /></span><span className="s"><T k="video.s" /></span></span>
-          <Chevron />
-        </Ext>
 
         <Ext className="link reveal d20" href={LINKS.buscador} event="2_buscar_por_foto">
           <span className="ico"><Search /></span>

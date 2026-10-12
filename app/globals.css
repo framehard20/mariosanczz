@@ -359,9 +359,11 @@ html.f3d-grabbing,html.f3d-grabbing *{cursor:grabbing!important;user-select:none
 /* La comisión se dice al lado del botón, no escondida en el pie */
 .disclosure{font-size:10.5px;color:#8E8E99;line-height:1.5;margin:9px 0 0;text-align:center}
 
-/* Qué se va a encontrar al otro lado: la sorpresa es lo que hace abandonar */
-.heads{max-width:440px;margin:12px auto 0;padding:12px 14px;background:var(--card);
-  border:1px solid var(--line);border-radius:14px}
-.heads>b{display:block;font-size:12.5px;margin-bottom:3px}
-.heads>span{display:block;font-size:12.5px;color:var(--muted);line-height:1.5}
-.heads>span b{font-weight:700;color:var(--ink)}
+/* El tutorial, dentro del ticket: la duda de "y yo cómo compro" sale justo aquí */
+.ticket-video{display:flex;align-items:center;gap:9px;margin:11px 0 0;padding:10px 12px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;
+  color:#fff;font-size:12.5px;font-weight:600;text-decoration:none}
+.ticket-video svg{flex-shrink:0}
+.ticket-video svg:first-child{width:18px;height:18px;color:#FF4D4D}
+.ticket-video svg:last-child{width:15px;height:15px;margin-left:auto;opacity:.5}
+.ticket-video:active{background:rgba(255,255,255,.1)}
