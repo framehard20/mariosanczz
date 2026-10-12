@@ -21,7 +21,6 @@ export const it = {
   "ladder.3": "−20% spedizione",
   "ladder.4": "−25% spedizione",
   "ladder.note": "Sono buoni **spedizione**, non sconti sul prodotto.",
-  "disclosure": "Con il mio codice guadagno una commissione. A te non costa nulla in più.",
   "step.1": "Crea il tuo account",
   "step.2": "Scegli il tuo outfit",
   "step.3": "Ricevilo a casa",

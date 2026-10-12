@@ -27,7 +27,6 @@ export const es = {
   "ladder.note": "Son cupones de **envío**, no del producto.",
 
 
-  "disclosure": "Gano una comisión con mi código. A ti no te cuesta nada más.",
 
   "step.1": "Crea tu cuenta",
   "step.2": "Elige tu outfit",

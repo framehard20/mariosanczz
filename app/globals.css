@@ -356,9 +356,6 @@ html.f3d-grabbing,html.f3d-grabbing *{cursor:grabbing!important;user-select:none
 .ladder-note{font-size:11px;color:#8E8E99;line-height:1.45;margin:0 0 4px}
 .ladder-note b{color:#C7C7D0;font-weight:700}
 
-/* La comisión se dice al lado del botón, no escondida en el pie */
-.disclosure{font-size:10.5px;color:#8E8E99;line-height:1.5;margin:9px 0 0;text-align:center}
-
 /* El tutorial, dentro del ticket: la duda de "y yo cómo compro" sale justo aquí */
 .ticket-video{display:flex;align-items:center;gap:9px;margin:11px 0 0;padding:10px 12px;
   background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;

@@ -21,7 +21,6 @@ export const pl = {
   "ladder.3": "−20% wysyłki",
   "ladder.4": "−25% wysyłki",
   "ladder.note": "To kupony na **wysyłkę**, nie zniżki na produkt.",
-  "disclosure": "Z moim kodem dostaję prowizję. Ciebie to nic więcej nie kosztuje.",
   "step.1": "Załóż konto",
   "step.2": "Wybierz outfit",
   "step.3": "Odbierz w domu",

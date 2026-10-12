@@ -21,7 +21,6 @@ export const pt = {
   "ladder.3": "−20% de envio",
   "ladder.4": "−25% de envio",
   "ladder.note": "São cupões de **envio**, não descontos no produto.",
-  "disclosure": "Com o meu código ganho uma comissão. A ti não te custa mais nada.",
   "step.1": "Cria a tua conta",
   "step.2": "Escolhe o teu outfit",
   "step.3": "Recebe em casa",

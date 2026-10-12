@@ -21,7 +21,6 @@ export const fr = {
   "ladder.3": "−20 % de livraison",
   "ladder.4": "−25 % de livraison",
   "ladder.note": "Ce sont des bons de **livraison**, pas une réduction sur le produit.",
-  "disclosure": "Je touche une commission avec mon code. Ça ne te coûte rien de plus.",
   "step.1": "Crée ton compte",
   "step.2": "Choisis ta tenue",
   "step.3": "Reçois-la chez toi",
