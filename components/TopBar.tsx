@@ -1,49 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { LINKS } from "@/lib/site";
+import { LINKS, REGISTRADOS } from "@/lib/site";
 import { ArrowRight } from "./icons";
-import { bold, useLang } from "./Lang";
+import { useLang } from "./Lang";
 
-const HALF_DAY = 12 * 3600;
-
-// Hora de Madrid real (CET/CEST): el antiguo offset fijo UTC+2 iba 1h mal en invierno.
-const madridClock = new Intl.DateTimeFormat("en-GB", {
-  timeZone: "Europe/Madrid",
-  hour: "2-digit",
-  minute: "2-digit",
-  second: "2-digit",
-  hourCycle: "h23",
-});
-
-/** Seconds until the next 00:00 / 12:00 cut-off, Spain time. */
-function secondsLeft(now: Date): number {
-  let h = 0, m = 0, s = 0;
-  for (const part of madridClock.formatToParts(now)) {
-    if (part.type === "hour") h = Number(part.value);
-    else if (part.type === "minute") m = Number(part.value);
-    else if (part.type === "second") s = Number(part.value);
-  }
-  return HALF_DAY - ((h * 3600 + m * 60 + s) % HALF_DAY);
-}
-
-const two = (n: number) => String(n).padStart(2, "0");
+// Sticky offer bar. It used to carry a countdown that rolled over every twelve
+// hours and a "only for the first 50" line — neither was true, and both are
+// exactly the kind of claim that costs an affiliate code. What replaced them is
+// a number that is true and that this audience trusts more anyway: how many
+// people have already registered.
 
 export function TopBar() {
   const { t } = useLang();
-  const [left, setLeft] = useState<number | null>(null);
   const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    let timer: ReturnType<typeof setTimeout>;
-    const tick = () => {
-      setLeft(secondsLeft(new Date()));
-      // align ticks to the wall-clock second so the display never skips a digit
-      timer = setTimeout(tick, 1000 - (Date.now() % 1000) + 15);
-    };
-    tick();
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 14);
@@ -52,27 +22,18 @@ export function TopBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const urgency = left === null ? "" : left <= 3600 ? " hot" : left <= 3 * 3600 ? " warn" : "";
-  const label =
-    left === null
-      ? "--:--:--"
-      : `${two(Math.floor(left / 3600))}:${two(Math.floor((left % 3600) / 60))}:${two(left % 60)}`;
-
   return (
     <div className={`topbar${scrolled ? " scrolled" : ""}`}>
       <div className="topbar-in">
         <div className="tb-info">
-          <span className="tb-disc">−25%</span>
+          <span className="tb-disc">4</span>
           <span className="tb-msg">{t("tb.msg")}</span>
           <span className="tb-sep">·</span>
-          <span className="tb-k">{t("tb.ends")}</span>
-          <span className={`tb-clock${urgency}`} role="timer">
-            {label}
-          </span>
+          <span className="tb-proof">{t("tb.proof", { n: REGISTRADOS })}</span>
         </div>
 
         <a
-          className={`tb-btn${urgency}`}
+          className="tb-btn"
           href={LINKS.hipobuy}
           target="_blank"
           rel="noopener"
@@ -84,8 +45,6 @@ export function TopBar() {
           </span>
           <ArrowRight />
         </a>
-
-        <div className="tb-50bar">{bold(t("tb.50"))}</div>
       </div>
     </div>
   );

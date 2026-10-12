@@ -9,6 +9,11 @@
 export const HANDLE = "mariosanczz";
 export const INVITE_CODE = "YILTEC";
 
+// Gente ya registrada con el código. Es la prueba social de la barra de arriba
+// y sustituye al contador falso: sube este número cuando lo veas en Hipobuy,
+// y deja siempre uno que puedas demostrar.
+export const REGISTRADOS = 200;
+
 export const LINKS = {
   hipobuy: `https://hipobuy.com/register?inviteCode=${INVITE_CODE}`,
   outfits: "https://flayfind.com",

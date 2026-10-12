@@ -1,31 +1,31 @@
-import type { Dict } from ".";
-
-export const fr: Dict = {
-  "tb.msg": "sur la livraison",
-  "tb.ends": "Fin dans",
-  "tb.btn": "Voir la liste des produits",
-  "tb.btnSub": "Inscription gratuite · −25% livraison",
-  "tb.50": "Coupon réservé aux **50 premiers** · Profites-en !",
-
+export const fr = {
+  "tb.msg": "bons de livraison",
+  "tb.proof": "+{n} déjà inscrits",
+  "tb.btn": "Créer un compte gratuit",
+  "tb.btnSub": "Gratuit · 1 minute · sans carte",
   "hero.pitch": "Acheter sur le marché chinois, **facile et pas cher**",
-
   "ticket.ey": "Commence ici",
   "ticket.title": "Achète des vêtements sur le marché chinois",
-  "ticket.sub": "Rejoins Hipobuy, où je trouve les tenues de mes vidéos.",
-  "cta.tag": "−25% livraison",
+  "ticket.sub": "Hipobuy est un agent d'achat : il achète les vêtements pour toi en Chine et te les envoie chez toi. C'est là que je trouve les tenues des vidéos.",
+  "cta.tag": "4 bons de livraison",
   "cta.label": "Créer un compte gratuit",
-  "cta.sub": "et activer mes −25% sur la livraison",
+  "cta.sub": "et récupérer mes 4 bons de livraison",
   "trust.free": "Gratuit",
-  "trust.time": "2 minutes",
+  "trust.time": "1 minute",
   "trust.card": "Sans carte",
   "code.chip": "Code **{code}** déjà appliqué ✓",
-  "code.copied": "Code {code} copié ✓",
-  "code.yours": "Ton code : {code}",
-
+  "ladder.title": "En t'inscrivant avec mon code, tu reçois :",
+  "ladder.1": "−10 % de livraison",
+  "ladder.2": "−15 % de livraison",
+  "ladder.3": "−20 % de livraison",
+  "ladder.4": "−25 % de livraison",
+  "ladder.note": "Ce sont des bons de **livraison**, pas une réduction sur le produit.",
+  "heads.title": "Avant de cliquer :",
+  "heads.body": "Le site de Hipobuy est **en anglais**. C'est 4 cases (e-mail et mot de passe) et moins d'une minute. Mon code est déjà rempli.",
+  "disclosure": "Je touche une commission si tu crées ton compte avec mon code. Ça ne te coûte rien de plus et les bons sont pour toi.",
   "step.1": "Crée ton compte",
   "step.2": "Choisis ta tenue",
   "step.3": "Reçois-la chez toi",
-
   "prov.title": "Fournisseurs",
   "prov.sub": "Les vêtements de mes vidéos, avec leur lien d'achat",
   "prod.t": "Liste des produits",
@@ -33,23 +33,19 @@ export const fr: Dict = {
   "outf.t": "Liste des tenues",
   "outf.s": "Les tenues complètes et leur prix",
   "repeat.t": "Tu sais déjà ce que tu veux ?",
-  "repeat.s": "Crée ton compte gratuit et active tes −25% sur la livraison",
-
+  "repeat.s": "Crée ton compte gratuit et récupère tes 4 bons de livraison",
   "help.title": "Des questions ? Parle-moi ici",
   "video.t": "Tu ne sais pas commander ? Regarde ici",
   "video.s": "Apprends en quelques minutes (en espagnol)",
   "foto.t": "Tu cherches un autre vêtement ? Cherche-le par photo",
-  "foto.s": "Envoie-moi la photo et je te passe le lien",
-
+  "foto.s": "Envoie-moi la photo sur Discord et je te trouve le lien",
   "follow.title": "Suis-moi",
   "foot": "Fait par **{handle}** + **{code}**",
-
   "xmas.label": "Noël :",
   "xmas.today": "dernier jour pour commander",
   "xmas.one": "plus qu'1 jour pour commander",
   "xmas.many": "plus que {n} jours pour commander",
   "xmas.until": "commande jusqu'au {date}",
-
   "lang.title": "Langue",
   "lang.change": "Changer de langue",
 };

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Floating3D } from "@/components/Floating3D";
-import { CopyCode } from "@/components/CopyCode";
 import { TopBar } from "@/components/TopBar";
 import { XmasNotice } from "@/components/XmasNotice";
 import { T } from "@/components/Lang";
@@ -77,6 +76,15 @@ export default function Home() {
 
           <hr className="dash" />
 
+          <p className="ladder-title"><T k="ladder.title" /></p>
+          <ul className="ladder">
+            <li><T k="ladder.1" /></li>
+            <li><T k="ladder.2" /></li>
+            <li><T k="ladder.3" /></li>
+            <li><T k="ladder.4" /></li>
+          </ul>
+          <p className="ladder-note"><T k="ladder.note" /></p>
+
           <div className="cta-wrap">
             <span className="cta-tag"><T k="cta.tag" /></span>
             <Ext className="cta-btn" href={LINKS.hipobuy} event="1_registro_boton">
@@ -92,8 +100,14 @@ export default function Home() {
             <li><Check /> <T k="trust.time" /></li>
             <li><Check /> <T k="trust.card" /></li>
           </ul>
-          <CopyCode code={INVITE_CODE} />
+          <p className="disclosure"><T k="disclosure" /></p>
+          <p className="codechip"><T k="code.chip" vars={{ code: INVITE_CODE }} /></p>
         </section>
+
+        <div className="heads reveal d08">
+          <b><T k="heads.title" /></b>
+          <span><T k="heads.body" /></span>
+        </div>
 
         {/* ================= 3 PASOS ================= */}
         <ol className="steps reveal d10">

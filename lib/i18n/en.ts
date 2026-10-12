@@ -1,31 +1,31 @@
-import type { Dict } from ".";
-
-export const en: Dict = {
-  "tb.msg": "off shipping",
-  "tb.ends": "Ends in",
-  "tb.btn": "See the product list",
-  "tb.btnSub": "Sign up free · −25% shipping",
-  "tb.50": "Coupon only for the **first 50** · Grab it!",
-
+export const en = {
+  "tb.msg": "shipping coupons",
+  "tb.proof": "+{n} already signed up",
+  "tb.btn": "Create a free account",
+  "tb.btnSub": "Free · 1 minute · no card",
   "hero.pitch": "Shopping the Chinese market, **easy and cheap**",
-
   "ticket.ey": "Start here",
   "ticket.title": "Buy clothes from the Chinese market",
-  "ticket.sub": "Join Hipobuy, where I get the outfits from my videos.",
-  "cta.tag": "−25% shipping",
+  "ticket.sub": "Hipobuy is a shopping agent: it buys the clothes for you in China and ships them to your door. It is where I get the outfits from the videos.",
+  "cta.tag": "4 shipping coupons",
   "cta.label": "Create a free account",
-  "cta.sub": "and unlock my −25% off shipping",
+  "cta.sub": "and grab my 4 shipping coupons",
   "trust.free": "Free",
-  "trust.time": "2 minutes",
+  "trust.time": "1 minute",
   "trust.card": "No card needed",
   "code.chip": "Code **{code}** already applied ✓",
-  "code.copied": "Code {code} copied ✓",
-  "code.yours": "Your code: {code}",
-
+  "ladder.title": "Sign up with my code and you get:",
+  "ladder.1": "−10% shipping",
+  "ladder.2": "−15% shipping",
+  "ladder.3": "−20% shipping",
+  "ladder.4": "−25% shipping",
+  "ladder.note": "These are **shipping** coupons, not money off the product.",
+  "heads.title": "Before you tap:",
+  "heads.body": "Hipobuy's site is **in English**. It is 4 boxes (email and password) and under a minute. My code is already filled in.",
+  "disclosure": "I earn a commission if you create your account with my code. It costs you nothing extra and the coupons are yours.",
   "step.1": "Create your account",
   "step.2": "Pick your outfit",
   "step.3": "Get it delivered",
-
   "prov.title": "Suppliers",
   "prov.sub": "The clothes from my videos, with their buy links",
   "prod.t": "Product list",
@@ -33,23 +33,19 @@ export const en: Dict = {
   "outf.t": "Outfit list",
   "outf.s": "Complete outfits and their price",
   "repeat.t": "Already know what you want?",
-  "repeat.s": "Create your free account and unlock −25% off shipping",
-
+  "repeat.s": "Create your free account and grab your 4 shipping coupons",
   "help.title": "Questions? Talk to me here",
   "video.t": "Not sure how to buy? Watch here",
   "video.s": "Learn it in a few minutes (in Spanish)",
   "foto.t": "Looking for something else? Search by photo",
-  "foto.s": "Send me the photo and I'll send you the link",
-
+  "foto.s": "Send me the photo on Discord and I will find the link",
   "follow.title": "Follow me",
   "foot": "Made by **{handle}** + **{code}**",
-
   "xmas.label": "Christmas:",
   "xmas.today": "today is the last day to order",
   "xmas.one": "1 day left to order",
   "xmas.many": "{n} days left to order",
   "xmas.until": "order by {date}",
-
   "lang.title": "Language",
   "lang.change": "Change language",
 };

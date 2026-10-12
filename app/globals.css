@@ -46,6 +46,7 @@ body{
   margin-bottom:9px;font-family:var(--font);line-height:1}
 .tb-disc{color:var(--green);font-weight:900;font-size:15px;letter-spacing:-.2px}
 .tb-msg{font-size:11.5px;color:#C7C7D0;font-weight:500}
+.tb-proof{font-size:11.5px;color:#9A9AA6;font-weight:600}
 .tb-sep{color:#55565F;font-size:11px}
 .tb-k{font-size:9.5px;letter-spacing:1px;color:#9A9AA6;text-transform:uppercase}
 .tb-clock{font-weight:900;font-size:13.5px;font-variant-numeric:tabular-nums;
@@ -345,3 +346,22 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--green-deep);outline
 .f3d.ready{opacity:1}
 html.f3d-hover,html.f3d-hover *{cursor:grab!important}
 html.f3d-grabbing,html.f3d-grabbing *{cursor:grabbing!important;user-select:none;-webkit-user-select:none}
+
+/* Escalera de cupones: cuatro cupones se leen como una oferta mayor que un solo -25% */
+.ladder-title{font-size:12px;color:#B8B8C4;font-weight:600;margin:0 0 8px}
+.ladder{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:0 0 9px;padding:0}
+.ladder li{display:flex;align-items:center;justify-content:center;gap:5px;
+  background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:10px;
+  padding:9px 6px;font-size:12.5px;font-weight:700;color:var(--green)}
+.ladder-note{font-size:11px;color:#8E8E99;line-height:1.45;margin:0 0 4px}
+.ladder-note b{color:#C7C7D0;font-weight:700}
+
+/* La comisión se dice al lado del botón, no escondida en el pie */
+.disclosure{font-size:10.5px;color:#8E8E99;line-height:1.5;margin:9px 0 0;text-align:center}
+
+/* Qué se va a encontrar al otro lado: la sorpresa es lo que hace abandonar */
+.heads{max-width:440px;margin:12px auto 0;padding:12px 14px;background:var(--card);
+  border:1px solid var(--line);border-radius:14px}
+.heads>b{display:block;font-size:12.5px;margin-bottom:3px}
+.heads>span{display:block;font-size:12.5px;color:var(--muted);line-height:1.5}
+.heads>span b{font-weight:700;color:var(--ink)}

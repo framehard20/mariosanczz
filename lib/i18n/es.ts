@@ -1,25 +1,34 @@
 // Spanish: the source language. Every other file must have exactly these keys.
 export const es = {
-  "tb.msg": "dto. en envío",
-  "tb.ends": "Acaba en",
-  "tb.btn": "Ver la lista de productos",
-  "tb.btnSub": "Regístrate gratis · −25% envío",
-  "tb.50": "Cupón solo para los **primeros 50** · ¡Aprovecha!",
+  "tb.msg": "cupones de envío",
+  "tb.proof": "+{n} ya registrados",
+  "tb.btn": "Crear cuenta gratis",
+  "tb.btnSub": "Gratis · 1 minuto · sin tarjeta",
 
   "hero.pitch": "Comprar en el mercado chino, **fácil y barato**",
 
   "ticket.ey": "Empieza aquí",
   "ticket.title": "Compra ropa en el mercado chino",
-  "ticket.sub": "Accede a Hipobuy, donde consigo los outfits de los vídeos.",
-  "cta.tag": "−25% envío",
+  "ticket.sub": "Hipobuy es un agente de compras: te compra la ropa en China y te la manda a casa. Es donde consigo los outfits de los vídeos.",
+  "cta.tag": "4 cupones de envío",
   "cta.label": "Crear cuenta gratis",
-  "cta.sub": "y activar mi −25% en envío",
+  "cta.sub": "y coger mis 4 cupones de envío",
   "trust.free": "Gratis",
-  "trust.time": "2 minutos",
+  "trust.time": "1 minuto",
   "trust.card": "Sin tarjeta",
   "code.chip": "Código **{code}** ya aplicado ✓",
-  "code.copied": "Código {code} copiado ✓",
-  "code.yours": "Tu código: {code}",
+
+  "ladder.title": "Al registrarte con mi código te llevas:",
+  "ladder.1": "−10% de envío",
+  "ladder.2": "−15% de envío",
+  "ladder.3": "−20% de envío",
+  "ladder.4": "−25% de envío",
+  "ladder.note": "Son cupones de **envío**, no del producto.",
+
+  "heads.title": "Antes de que le des:",
+  "heads.body": "La web de Hipobuy está **en inglés**. Son 4 casillas (email y contraseña) y menos de un minuto. Mi código ya va puesto.",
+
+  "disclosure": "Gano una comisión si creas tu cuenta con mi código. A ti no te cuesta nada más y los cupones son tuyos.",
 
   "step.1": "Crea tu cuenta",
   "step.2": "Elige tu outfit",
@@ -32,13 +41,13 @@ export const es = {
   "outf.t": "Lista de outfits",
   "outf.s": "Los conjuntos ya montados y su precio",
   "repeat.t": "¿Ya sabes qué quieres?",
-  "repeat.s": "Crea tu cuenta gratis y actívalo con tu −25% en envío",
+  "repeat.s": "Crea tu cuenta gratis y coge tus 4 cupones de envío",
 
   "help.title": "¿Tienes dudas? Háblame aquí",
   "video.t": "¿No sabes comprar? Míralo aquí",
   "video.s": "Apréndelo en unos minutos",
   "foto.t": "¿Buscas otra prenda? Búscala por foto",
-  "foto.s": "Mándame la foto y te paso el link",
+  "foto.s": "Mándame la foto por Discord y te paso el link",
 
   "follow.title": "Sígueme",
   "foot": "Hecho por **{handle}** + **{code}**",

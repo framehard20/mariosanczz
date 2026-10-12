@@ -1,31 +1,31 @@
-import type { Dict } from ".";
-
-export const zh: Dict = {
-  "tb.msg": "运费折扣",
-  "tb.ends": "距结束",
-  "tb.btn": "查看商品清单",
-  "tb.btnSub": "免费注册 · 运费 −25%",
-  "tb.50": "优惠券仅限**前 50 名** · 抓紧！",
-
+export const zh = {
+  "tb.msg": "张运费券",
+  "tb.proof": "已有 {n}+ 人注册",
+  "tb.btn": "免费注册账号",
+  "tb.btnSub": "免费 · 1 分钟 · 无需银行卡",
   "hero.pitch": "在中国市场购物，**简单又便宜**",
-
   "ticket.ey": "从这里开始",
   "ticket.title": "在中国市场买衣服",
-  "ticket.sub": "注册 Hipobuy，我视频里的穿搭都是在那里买的。",
-  "cta.tag": "运费 −25%",
-  "cta.label": "免费创建账户",
-  "cta.sub": "并激活我的运费 −25% 优惠",
+  "ticket.sub": "Hipobuy 是代购平台：帮你在中国买衣服并寄到家。视频里的穿搭都是在这里买的。",
+  "cta.tag": "4 张运费券",
+  "cta.label": "免费注册账号",
+  "cta.sub": "并领取我的 4 张运费券",
   "trust.free": "免费",
-  "trust.time": "2 分钟",
+  "trust.time": "1 分钟",
   "trust.card": "无需银行卡",
   "code.chip": "已自动使用优惠码 **{code}** ✓",
-  "code.copied": "优惠码 {code} 已复制 ✓",
-  "code.yours": "你的优惠码：{code}",
-
+  "ladder.title": "用我的邀请码注册即可获得：",
+  "ladder.1": "运费 −10%",
+  "ladder.2": "运费 −15%",
+  "ladder.3": "运费 −20%",
+  "ladder.4": "运费 −25%",
+  "ladder.note": "这些是**运费**券，不是商品折扣。",
+  "heads.title": "点击之前：",
+  "heads.body": "Hipobuy 的网站是**英文**的。只有 4 个输入框（邮箱和密码），不到一分钟。我的邀请码已经填好了。",
+  "disclosure": "如果你用我的邀请码注册，我会获得佣金。你不会多花一分钱，优惠券都是你的。",
   "step.1": "创建账户",
   "step.2": "挑选穿搭",
   "step.3": "送货上门",
-
   "prov.title": "供应商",
   "prov.sub": "我视频里的衣服，附购买链接",
   "prod.t": "商品清单",
@@ -33,23 +33,19 @@ export const zh: Dict = {
   "outf.t": "穿搭清单",
   "outf.s": "搭配好的整套穿搭及价格",
   "repeat.t": "已经知道想买什么了？",
-  "repeat.s": "免费创建账户，激活运费 −25% 优惠",
-
+  "repeat.s": "免费注册，领取你的 4 张运费券",
   "help.title": "有疑问？在这里联系我",
   "video.t": "不会下单？看这里",
   "video.s": "几分钟就能学会（西班牙语视频）",
   "foto.t": "想找其他衣服？用照片搜索",
-  "foto.s": "把照片发给我，我把链接发给你",
-
+  "foto.s": "在 Discord 把照片发给我，我帮你找链接",
   "follow.title": "关注我",
   "foot": "由 **{handle}** + **{code}** 制作",
-
   "xmas.label": "圣诞节：",
   "xmas.today": "今天是最后下单日",
   "xmas.one": "还剩 1 天可下单",
   "xmas.many": "还剩 {n} 天可下单",
   "xmas.until": "请在 {date} 前下单",
-
   "lang.title": "语言",
   "lang.change": "切换语言",
 };
