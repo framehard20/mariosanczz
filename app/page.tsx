@@ -105,6 +105,7 @@ export default function Home() {
             <li><Check /> <T k="trust.time" /></li>
             <li><Check /> <T k="trust.card" /></li>
           </ul>
+          <p className="first-note"><T k="ticket.first" /></p>
           <p className="codechip"><T k="code.chip" vars={{ code: INVITE_CODE }} /></p>
         </section>
 

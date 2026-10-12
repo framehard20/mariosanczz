@@ -28,6 +28,7 @@ export const es = {
 
 
 
+  "ticket.first": "Primero la cuenta. Sin ella no puedes comprar nada de la lista.",
   "step.1": "Crea tu cuenta",
   "step.2": "Elige tu outfit",
   "step.3": "Recíbelo en casa",
@@ -35,7 +36,7 @@ export const es = {
   "prov.title": "Proveedores",
   "prov.sub": "La ropa de mis vídeos, con su enlace de compra",
   "prod.t": "Lista de productos",
-  "prod.s": "Todas las prendas con su enlace de compra",
+  "prod.s": "Todas las prendas con su enlace · necesitas cuenta para comprar",
   "outf.t": "Lista de outfits",
   "outf.s": "Los conjuntos ya montados y su precio",
   "repeat.t": "¿Ya sabes qué quieres?",
