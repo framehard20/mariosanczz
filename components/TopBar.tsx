@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { LINKS, REGISTRADOS } from "@/lib/site";
-import { ArrowRight } from "./icons";
+import { ArrowRight, Masterspread } from "./icons";
 import { localeOf } from "@/lib/i18n";
 import { useLang } from "./Lang";
 
@@ -11,6 +11,9 @@ import { useLang } from "./Lang";
 // exactly the kind of claim that costs an affiliate code. What replaced them is
 // a number that is true and that this audience trusts more anyway: how many
 // people have already registered.
+//
+// Since 21 Oct 2026 the bar sends people to masterspread.com (the product list
+// as a website, where the $800 + 40% shipping offer is), at Mario's request.
 
 export function TopBar() {
   const { t, lang } = useLang();
@@ -27,7 +30,7 @@ export function TopBar() {
     <div className={`topbar${scrolled ? " scrolled" : ""}`}>
       <div className="topbar-in">
         <div className="tb-info">
-          <span className="tb-disc">4</span>
+          <span className="tb-disc">{t("tb.disc")}</span>
           <span className="tb-msg">{t("tb.msg")}</span>
           <span className="tb-sep">·</span>
           <span className="tb-proof">{t("tb.proof", { n: REGISTRADOS.toLocaleString(localeOf(lang)) })}</span>
@@ -35,11 +38,12 @@ export function TopBar() {
 
         <a
           className="tb-btn"
-          href={LINKS.hipobuy}
+          href={LINKS.masterspread}
           target="_blank"
           rel="noopener"
-          data-umami-event="1_registro_barra"
+          data-umami-event="1_masterspread_barra"
         >
+          <span className="tb-btn-logo"><Masterspread /></span>
           <span className="tb-btn-label">
             {t("tb.btn")}
             <span className="tb-btn-sub">{t("tb.btnSub")}</span>

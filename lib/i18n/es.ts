@@ -1,15 +1,16 @@
 // Spanish: the source language. Every other file must have exactly these keys.
 export const es = {
-  "tb.msg": "cupones de envío",
+  "tb.msg": "en envío",
+  "tb.disc": "800$ + 40%",
   "tb.proof": "+{n} ya registrados",
-  "tb.btn": "Crear cuenta gratis",
-  "tb.btnSub": "Gratis · 1 minuto · sin tarjeta",
+  "tb.btn": "Lista de productos + descuento aquí",
+  "tb.btnSub": "masterspread.com",
 
   "hero.pitch": "Comprar en el mercado chino, **fácil y barato**",
 
   "ticket.ey": "Empieza aquí",
   "ticket.title": "Compra ropa en el mercado chino",
-  "ticket.sub": "Hipobuy es un agente de compras: te compra la ropa en China y te la manda a casa. Es donde consigo los outfits de los vídeos.",
+  "ticket.sub": "Necesitamos un agente de compras: te compra la ropa en China y te la manda a casa. Es donde consigo los outfits de los vídeos.",
   "ticket.video": "Mira cómo se compra, paso a paso",
   "cta.tag": "4 cupones de envío",
   "cta.label": "Crear cuenta gratis",
@@ -36,8 +37,8 @@ export const es = {
   "prov.sub": "La ropa de mis vídeos, con su enlace de compra",
   "prod.t": "Lista de productos",
   "prod.s": "Todas las prendas con su enlace · necesitas cuenta para comprar",
-  "shop.t": "Tienda online",
-  "shop.s": "La lista en web: busca, filtra y abre cada prenda",
+  "shop.t": "Lista productos web",
+  "shop.s": "Busca, filtra y abre cada prenda",
   "outf.t": "Lista de outfits",
   "outf.s": "Los conjuntos ya montados y su precio",
   "repeat.t": "¿Ya sabes qué quieres?",
