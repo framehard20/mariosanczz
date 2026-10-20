@@ -122,21 +122,21 @@ export default function Home() {
           <p><T k="prov.sub" /></p>
         </div>
 
-        <Ext className="link featured reveal d12" href={LINKS.productos} event="2_lista_productos">
-          <span className="ico"><Sheet /></span>
-          <span className="txt"><span className="t"><T k="prod.t" /></span><span className="s"><T k="prod.s" /></span></span>
-          <Chevron />
-        </Ext>
-
-        <Ext className="link reveal d13" href={LINKS.masterspread} event="2_masterspread">
+        <Ext className="link featured reveal d12" href={LINKS.masterspread} event="2_masterspread">
           <span className="ico"><Masterspread /></span>
           <span className="txt"><span className="t"><T k="shop.t" /> <span className="by">Masterspread</span></span><span className="s"><T k="shop.s" /></span></span>
           <Chevron />
         </Ext>
 
-        <Ext className="link reveal d14" href={LINKS.outfits} event="2_lista_outfits">
+        <Ext className="link reveal d13" href={LINKS.outfits} event="2_lista_outfits">
           <span className="ico"><Image src={flayfindLogo} alt="" width={24} height={24} /></span>
           <span className="txt"><span className="t"><T k="outf.t" /> <span className="by">Flayfind</span></span><span className="s"><T k="outf.s" /></span></span>
+          <Chevron />
+        </Ext>
+
+        <Ext className="link reveal d14" href={LINKS.productos} event="2_lista_productos">
+          <span className="ico"><Sheet /></span>
+          <span className="txt"><span className="t"><T k="prod.t" /></span><span className="s"><T k="prod.s" /></span></span>
           <Chevron />
         </Ext>
 
