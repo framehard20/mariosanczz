@@ -28,6 +28,8 @@ export const it = {
   "prov.sub": "I vestiti dei miei video, con il link d'acquisto",
   "prod.t": "Lista dei prodotti",
   "prod.s": "Ogni capo con il suo link · serve account per comprare",
+  "shop.t": "Negozio online",
+  "shop.s": "La lista come sito: cerca, filtra, apri ogni capo",
   "outf.t": "Lista degli outfit",
   "outf.s": "Gli outfit completi e il loro prezzo",
   "repeat.t": "Sai già cosa vuoi?",

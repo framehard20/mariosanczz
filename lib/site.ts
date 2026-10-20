@@ -18,6 +18,8 @@ export const REGISTRADOS = 1000;
 export const LINKS = {
   hipobuy: `https://hipobuy.com/register?inviteCode=${INVITE_CODE}`,
   outfits: "https://flayfind.com",
+  // la lista de productos en forma de web (Masterspread), aparte de la hoja
+  masterspread: "https://www.masterspread.com",
   productos:
     "https://docs.google.com/spreadsheets/d/17WHP0zYLfmwC9NZ9itCUNSPT9ymWnxT6qIXDKgO09Cs/edit?gid=1281688000#gid=1281688000",
   comoComprar: "https://youtu.be/TY7p0an6uL0",

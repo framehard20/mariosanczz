@@ -10,6 +10,7 @@ import {
   Chevron,
   Discord,
   Instagram,
+  Masterspread,
   Search,
   Sheet,
   Telegram,
@@ -124,6 +125,12 @@ export default function Home() {
         <Ext className="link featured reveal d12" href={LINKS.productos} event="2_lista_productos">
           <span className="ico"><Sheet /></span>
           <span className="txt"><span className="t"><T k="prod.t" /></span><span className="s"><T k="prod.s" /></span></span>
+          <Chevron />
+        </Ext>
+
+        <Ext className="link reveal d13" href={LINKS.masterspread} event="2_masterspread">
+          <span className="ico"><Masterspread /></span>
+          <span className="txt"><span className="t"><T k="shop.t" /> <span className="by">Masterspread</span></span><span className="s"><T k="shop.s" /></span></span>
           <Chevron />
         </Ext>
 

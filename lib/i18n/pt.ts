@@ -28,6 +28,8 @@ export const pt = {
   "prov.sub": "A roupa dos meus vídeos, com o link de compra",
   "prod.t": "Lista de produtos",
   "prod.s": "Cada peça com o seu link · precisas de conta para comprar",
+  "shop.t": "Loja online",
+  "shop.s": "A lista em site: pesquisa, filtra e abre cada peça",
   "outf.t": "Lista de outfits",
   "outf.s": "Os conjuntos já montados e o preço",
   "repeat.t": "Já sabes o que queres?",

@@ -28,6 +28,8 @@ export const pl = {
   "prov.sub": "Ubrania z moich filmów z linkiem do zakupu",
   "prod.t": "Lista produktów",
   "prod.s": "Każda rzecz z linkiem · do zakupu potrzebne konto",
+  "shop.t": "Sklep online",
+  "shop.s": "Lista jako strona: szukaj, filtruj, otwórz każdą rzecz",
   "outf.t": "Lista outfitów",
   "outf.s": "Gotowe zestawy i ich cena",
   "repeat.t": "Wiesz już, czego chcesz?",
