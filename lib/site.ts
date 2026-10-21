@@ -7,22 +7,15 @@
    ===================================================================== */
 
 export const HANDLE = "mariosanczz";
-export const INVITE_CODE = "YILTEC";
 
-// Gente ya registrada con el código. Es la prueba social de la barra de arriba
-// y sustituye al contador falso. Redondea siempre HACIA ABAJO respecto al
-// "Total" del panel de Hipobuy, para que el "+" sea verdad y no haga falta
-// tocarlo cada semana. Panel a 12 oct 2026: 1.177 en total, asi que "+1.000" va sobrado.
+// Gente ya registrada (la prueba social de la barra de arriba). Pon siempre un
+// número que puedas demostrar, redondeado hacia abajo, para que el "+" sea verdad.
 export const REGISTRADOS = 1000;
 
 export const LINKS = {
-  hipobuy: `https://hipobuy.com/register?inviteCode=${INVITE_CODE}`,
   outfits: "https://flayfind.com",
   // la lista de productos en forma de web (Masterspread), aparte de la hoja
   masterspread: "https://www.masterspread.com",
-  productos:
-    "https://docs.google.com/spreadsheets/d/17WHP0zYLfmwC9NZ9itCUNSPT9ymWnxT6qIXDKgO09Cs/edit?gid=1281688000#gid=1281688000",
-  comoComprar: "https://youtu.be/TY7p0an6uL0",
   buscador: "https://discord.gg/BUrt9M2dyS",
   discord: "https://discord.gg/BUrt9M2dyS",
   telegram: "https://t.me/addlist/gdNCnbOv_Q85NTNk",

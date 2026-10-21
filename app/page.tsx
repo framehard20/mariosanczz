@@ -1,24 +1,20 @@
 import Image from "next/image";
 import { Floating3D } from "@/components/Floating3D";
 import { TopBar } from "@/components/TopBar";
-import { XmasNotice } from "@/components/XmasNotice";
 import { T } from "@/components/Lang";
 import { LangChip, LangSection } from "@/components/LangPicker";
 import {
-  ArrowRight,
   Check,
   Chevron,
   Discord,
   Instagram,
   Masterspread,
   Search,
-  Sheet,
   Telegram,
   TikTok,
   YouTube,
-  YouTubePlay,
 } from "@/components/icons";
-import { HANDLE, INVITE_CODE, LINKS } from "@/lib/site";
+import { HANDLE, LINKS } from "@/lib/site";
 import photo from "@/assets/mariosanczz.jpg";
 import flayfindLogo from "@/assets/flayfind.png";
 
@@ -66,49 +62,6 @@ export default function Home() {
           <LangChip />
         </header>
 
-        {/* ================= TICKET / CTA HIPOBUY ================= */}
-        <section className="ticket reveal d05" data-3d="sneaker">
-          <div className="ticket-top">
-            <span className="ticket-ey"><T k="ticket.ey" /></span>
-          </div>
-          <h2><T k="ticket.title" /></h2>
-          <p className="sub"><T k="ticket.sub" /></p>
-          <Ext className="ticket-video" href={LINKS.comoComprar} event="2_video_tutorial">
-            <YouTubePlay />
-            <T k="ticket.video" />
-            <Chevron />
-          </Ext>
-          <XmasNotice />
-
-          <hr className="dash" />
-
-          <p className="ladder-title"><T k="ladder.title" /></p>
-          <ul className="ladder">
-            <li><T k="ladder.1" /></li>
-            <li><T k="ladder.2" /></li>
-            <li><T k="ladder.3" /></li>
-            <li><T k="ladder.4" /></li>
-          </ul>
-          <p className="ladder-note"><T k="ladder.note" /></p>
-
-          <div className="cta-wrap">
-            <span className="cta-tag"><T k="cta.tag" /></span>
-            <Ext className="cta-btn" href={LINKS.hipobuy} event="1_registro_boton">
-              <span className="cta-label">
-                <T k="cta.label" />
-                <span className="cta-sub"><T k="cta.sub" /></span>
-              </span>
-              <ArrowRight />
-            </Ext>
-          </div>
-          <ul className="cta-trust">
-            <li><Check /> <T k="trust.free" /></li>
-            <li><Check /> <T k="trust.time" /></li>
-            <li><Check /> <T k="trust.card" /></li>
-          </ul>
-          <p className="codechip"><T k="code.chip" vars={{ code: INVITE_CODE }} /></p>
-        </section>
-
         {/* ================= 3 PASOS ================= */}
         <ol className="steps reveal d10">
           <li className="step"><div className="n">1</div><p><T k="step.1" /></p></li>
@@ -134,22 +87,8 @@ export default function Home() {
           <Chevron />
         </Ext>
 
-        <Ext className="link reveal d14" href={LINKS.productos} event="2_lista_productos">
-          <span className="ico"><Sheet /></span>
-          <span className="txt"><span className="t"><T k="prod.t" /></span><span className="s"><T k="prod.s" /></span></span>
-          <Chevron />
-        </Ext>
-
-        <Ext className="cta-repeat reveal d16" href={LINKS.hipobuy} event="5_registro_repeat">
-          <span className="cta-repeat-txt">
-            <span className="t"><T k="repeat.t" /></span>
-            <span className="s"><T k="repeat.s" /></span>
-          </span>
-          <ArrowRight />
-        </Ext>
-
         {/* ================= AYUDA / COMUNIDAD ================= */}
-        <h3 className="eyebrow reveal d17"><T k="help.title" /></h3>
+        <h3 className="eyebrow reveal d17" data-3d="sneaker"><T k="help.title" /></h3>
 
         <Ext className="link reveal d20" href={LINKS.buscador} event="2_buscar_por_foto">
           <span className="ico"><Search /></span>
@@ -180,7 +119,7 @@ export default function Home() {
         </div>
 
         <footer className="foot reveal d28">
-          <T k="foot" vars={{ handle: HANDLE, code: INVITE_CODE }} />
+          <T k="foot" vars={{ handle: HANDLE }} />
         </footer>
       </main>
 
