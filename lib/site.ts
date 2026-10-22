@@ -7,6 +7,9 @@
    ===================================================================== */
 
 export const HANDLE = "mariosanczz";
+// email que sale en el aviso legal, los términos y la privacidad
+export const CONTACT_EMAIL = "flayfind@gmail.com";
+export const SITE_DOMAIN = "mariosanczz.com";
 
 // Gente ya registrada (la prueba social de la barra de arriba). Pon siempre un
 // número que puedas demostrar, redondeado hacia abajo, para que el "+" sea verdad.

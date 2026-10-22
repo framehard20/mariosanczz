@@ -230,6 +230,22 @@ body{
 /* ================= FOOTER ================= */
 .foot{text-align:center;margin-top:32px;font-size:11px;color:var(--muted);font-family:var(--font)}
 .foot b{color:var(--ink)}
+.foot-links{margin-top:8px;font-size:11px}
+.foot-links a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+
+/* legal pages (aviso legal, términos, privacidad) */
+.legal{max-width:680px;margin:0 auto;padding:28px 4px 40px;font-size:15px;line-height:1.65;color:var(--ink-2)}
+.legal-back{display:inline-block;font-weight:700;font-size:13px;color:var(--ink);margin-bottom:20px}
+.legal h1{font-size:clamp(24px,6vw,32px);font-weight:900;letter-spacing:-.02em;line-height:1.15;color:var(--ink);text-wrap:balance}
+.legal-updated{margin-top:6px;font-size:13px;color:var(--muted)}
+.legal h2{margin-top:28px;font-size:17px;font-weight:800;color:var(--ink)}
+.legal p,.legal ul{margin-top:10px}
+.legal ul{padding-left:20px}
+.legal li{margin-top:8px}
+.legal b{color:var(--ink)}
+.legal a{color:var(--green-deep);text-decoration:underline;text-underline-offset:2px}
+.legal-nav{margin-top:36px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+
 .foot-disc{max-width:44ch;margin:8px auto 0;font-size:10.5px;line-height:1.45}
 
 /* ================= ANIMACIÓN DE ENTRADA ================= */

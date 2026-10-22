@@ -122,6 +122,10 @@ export default function Home() {
           <T k="foot" vars={{ handle: HANDLE }} />
           {/* the links carry a referral code: advertising has to say so */}
           <p className="foot-disc"><T k="foot.disc" /></p>
+          {/* legal pages, in Spanish (the reference text in Spain) */}
+          <p className="foot-links">
+            <a href="/aviso-legal">Aviso legal</a> · <a href="/terminos">Términos de uso</a> · <a href="/privacidad">Privacidad</a>
+          </p>
         </footer>
       </main>
 
