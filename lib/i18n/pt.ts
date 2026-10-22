@@ -19,6 +19,7 @@ export const pt = {
   "foto.s": "Manda-me a foto no Discord e eu arranjo-te o link",
   "follow.title": "Segue-me",
   "foot": "Feito por **{handle}**",
+  "foot.disc": "Esta página não vende nada: liga à Uidbuy e aos seus vendedores, que têm as suas próprias condições. Os links levam o meu código de referência: a ti dá-te o desconto ao registares-te e a mim pode dar-me uma comissão.",
   "xmas.label": "Natal:",
   "xmas.today": "hoje é o último dia para encomendar",
   "xmas.one": "falta 1 dia para encomendar",

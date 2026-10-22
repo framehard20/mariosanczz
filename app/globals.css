@@ -230,6 +230,7 @@ body{
 /* ================= FOOTER ================= */
 .foot{text-align:center;margin-top:32px;font-size:11px;color:var(--muted);font-family:var(--font)}
 .foot b{color:var(--ink)}
+.foot-disc{max-width:44ch;margin:8px auto 0;font-size:10.5px;line-height:1.45}
 
 /* ================= ANIMACIÓN DE ENTRADA ================= */
 @media (prefers-reduced-motion:no-preference){

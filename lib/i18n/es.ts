@@ -27,6 +27,7 @@ export const es = {
 
   "follow.title": "Sígueme",
   "foot": "Hecho por **{handle}**",
+  "foot.disc": "Esta web no vende nada: enlaza a Uidbuy y a sus vendedores, que tienen sus propias condiciones. Los enlaces llevan mi código de referido: a ti te da el descuento al registrarte y a mí me puede dar una comisión.",
 
   "xmas.label": "Navidad:",
   "xmas.today": "hoy es el último día para pedir",

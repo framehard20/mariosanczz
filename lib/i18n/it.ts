@@ -19,6 +19,7 @@ export const it = {
   "foto.s": "Mandami la foto su Discord e ti trovo il link",
   "follow.title": "Seguimi",
   "foot": "Fatto da **{handle}**",
+  "foot.disc": "Questa pagina non vende nulla: rimanda a Uidbuy e ai suoi venditori, che hanno le proprie condizioni. I link contengono il mio codice referral: a te dà lo sconto all'iscrizione e a me può far guadagnare una commissione.",
   "xmas.label": "Natale:",
   "xmas.today": "oggi è l'ultimo giorno per ordinare",
   "xmas.one": "manca 1 giorno per ordinare",

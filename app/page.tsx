@@ -120,6 +120,8 @@ export default function Home() {
 
         <footer className="foot reveal d28">
           <T k="foot" vars={{ handle: HANDLE }} />
+          {/* the links carry a referral code: advertising has to say so */}
+          <p className="foot-disc"><T k="foot.disc" /></p>
         </footer>
       </main>
 

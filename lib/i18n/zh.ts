@@ -19,6 +19,7 @@ export const zh = {
   "foto.s": "在 Discord 把照片发给我，我帮你找链接",
   "follow.title": "关注我",
   "foot": "由 **{handle}** 制作",
+  "foot.disc": "本页面不出售任何商品：它链接到 Uidbuy 及其卖家，他们有自己的条款。链接带有我的推荐码：你注册时可获得优惠，我可能获得佣金。",
   "xmas.label": "圣诞节：",
   "xmas.today": "今天是最后下单日",
   "xmas.one": "还剩 1 天可下单",

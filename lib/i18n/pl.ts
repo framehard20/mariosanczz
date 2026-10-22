@@ -19,6 +19,7 @@ export const pl = {
   "foto.s": "Wyślij mi zdjęcie na Discordzie, a znajdę link",
   "follow.title": "Obserwuj mnie",
   "foot": "Stworzone przez **{handle}**",
+  "foot.disc": "Ta strona niczego nie sprzedaje: prowadzi do Uidbuy i jego sprzedawców, którzy mają własne warunki. Linki zawierają mój kod polecający: dostajesz zniżkę przy rejestracji, a ja mogę otrzymać prowizję.",
   "xmas.label": "Święta:",
   "xmas.today": "dziś ostatni dzień na zamówienie",
   "xmas.one": "jeszcze 1 dzień na zamówienie",

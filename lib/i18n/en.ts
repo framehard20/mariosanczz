@@ -19,6 +19,7 @@ export const en = {
   "foto.s": "Send me the photo on Discord and I will find the link",
   "follow.title": "Follow me",
   "foot": "Made by **{handle}**",
+  "foot.disc": "This page doesn't sell anything: it links to Uidbuy and its sellers, who have their own terms. The links carry my referral code: it gives you the discount when you sign up and may earn me a commission.",
   "xmas.label": "Christmas:",
   "xmas.today": "today is the last day to order",
   "xmas.one": "1 day left to order",
