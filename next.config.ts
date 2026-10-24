@@ -37,7 +37,14 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   async headers() {
-    return [{ source: "/:path*", headers: securityHeaders }];
+    return [
+      // a PDF opens in the browser's own viewer, which this page CSP would block
+      { source: "/:path((?!.*\\.pdf$).*)", headers: securityHeaders },
+      {
+        source: "/:file(.*\\.pdf)",
+        headers: securityHeaders.filter((h) => h.key !== "Content-Security-Policy" && h.key !== "X-Frame-Options"),
+      },
+    ];
   },
 };
 

@@ -44,6 +44,16 @@ export function Sheet() {
 }
 
 /** Masterspread's logo: a blue shopping bag. */
+export function Guide() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z" />
+      <path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5" />
+      <path d="M9 8h7M9 11.5h5" />
+    </svg>
+  );
+}
+
 export function Masterspread() {
   return (
     <svg viewBox="0 0 64 64" aria-hidden="true">

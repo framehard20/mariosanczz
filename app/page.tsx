@@ -8,6 +8,7 @@ import {
   Check,
   Chevron,
   Discord,
+  Guide,
   Instagram,
   Masterspread,
   Search,
@@ -78,6 +79,13 @@ export default function Home() {
           <span className="reg-pic">
             <Image src={uidbuyMascot} alt="" width={108} height={108} loading="eager" />
           </span>
+        </Ext>
+
+        {/* the step-by-step PDF (in Spanish), right under the sign-up */}
+        <Ext className="link guide reveal d10" href={LINKS.guia} event="2_guia_pdf">
+          <span className="ico"><Guide /></span>
+          <span className="txt"><span className="t"><T k="guia.t" /></span><span className="s"><T k="guia.s" /></span></span>
+          <Chevron />
         </Ext>
 
         {/* ================= 3 PASOS ================= */}

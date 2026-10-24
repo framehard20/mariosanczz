@@ -178,6 +178,10 @@ body{
 @keyframes regcalm{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-2px) scale(1.02)}}
 @media (max-width:360px){.reg{padding:14px 10px 14px 14px}.reg-t{font-size:17px}.reg-pic{width:88px;height:88px}}
 
+/* the guide sits right under the sign-up card (whose 4px shadow eats into the gap) */
+.link.guide{margin-top:14px}
+.link.guide .ico{background:var(--green-soft);color:var(--green-deep)}
+
 /* ================= PASOS ================= */
 .steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin:10px 0 20px;list-style:none}
 .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 8px;text-align:center}

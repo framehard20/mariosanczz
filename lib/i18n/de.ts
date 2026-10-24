@@ -9,6 +9,8 @@ export const de = {
   "reg.t": "Erstell dein Uidbuy-Konto",
   "reg.offer": "Mit meinem Link: **800 $ GRATIS in Gutscheinen** + ein Gutschein über **40 % auf den Versand**",
   "reg.cta": "Jetzt anmelden",
+  "guia.t": "Schritt-für-Schritt-Anleitung: so kaufst du",
+  "guia.s": "Von der Anmeldung bis nach Hause, mit echten Screenshots · PDF auf Spanisch",
 
   "step.1": "Konto erstellen",
   "step.2": "Outfit auswählen",
