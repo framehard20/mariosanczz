@@ -5,6 +5,11 @@ export const pt = {
   "tb.btn": "Lista de produtos + desconto aqui",
   "tb.btnSub": "masterspread.com",
   "hero.pitch": "Comprar no mercado chinês, **fácil e barato**",
+  "reg.tag": "Registo grátis",
+  "reg.t": "Cria a tua conta na Uidbuy",
+  "reg.offer": "Com o meu link: **800 $ de desconto** + cupão de **40% no envio**",
+  "reg.cta": "Registar agora",
+
   "step.1": "Cria a tua conta",
   "step.2": "Escolhe o teu outfit",
   "step.3": "Recebe em casa",

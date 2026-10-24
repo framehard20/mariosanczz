@@ -151,6 +151,33 @@ body{
   background:var(--green);padding:1px 7px 2px;border-radius:8px;
   transform:rotate(-1.5deg);line-height:1;box-shadow:0 2px 0 var(--green-deep)}
 
+/* ================= REGISTRO EN UIDBUY ================= */
+.reg{position:relative;display:flex;align-items:center;gap:10px;margin:14px 0 2px;padding:16px 12px 16px 18px;
+  border-radius:22px;text-decoration:none;color:var(--ink);
+  background:linear-gradient(135deg,#fff 0%,#fff 48%,var(--green-soft) 100%);
+  border:2px solid var(--green);
+  box-shadow:0 4px 0 var(--green-deep),0 18px 36px -18px rgba(22,163,74,.55);
+  transition:transform .12s,box-shadow .12s}
+.reg:active{transform:translateY(2px);box-shadow:0 2px 0 var(--green-deep),0 12px 26px -18px rgba(22,163,74,.55)}
+.reg-txt{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.reg-tag{font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--green-deep);
+  background:var(--green-soft);border-radius:100px;padding:3px 9px}
+.reg-t{font-family:var(--font);font-weight:900;font-size:19px;letter-spacing:-.4px;line-height:1.1}
+.reg-offer{font-size:13px;line-height:1.35;color:var(--ink-2)}
+.reg-offer b{color:var(--green-deep);font-weight:900}
+.reg-cta{margin-top:4px;display:inline-flex;align-items:center;gap:7px;background:var(--green);color:var(--ink);
+  font-family:var(--font);font-weight:900;font-size:14px;line-height:1;padding:10px 14px;border-radius:12px;
+  box-shadow:0 3px 0 var(--green-deep)}
+.reg-cta svg{width:16px;height:16px;transition:transform .12s}
+.reg:hover .reg-cta svg{transform:translateX(3px)}
+.reg-pic{flex:0 0 auto;width:108px;height:108px;border-radius:24px;overflow:hidden;background:#fff;
+  border:1px solid var(--line);box-shadow:0 8px 18px -12px rgba(24,26,24,.35)}
+.reg-pic img{width:100%;height:100%;display:block;object-fit:cover}
+/* the mascot breathes slowly: calm, not flashy */
+@media (prefers-reduced-motion:no-preference){.reg-pic img{animation:regcalm 4s ease-in-out infinite}}
+@keyframes regcalm{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-2px) scale(1.02)}}
+@media (max-width:360px){.reg{padding:14px 10px 14px 14px}.reg-t{font-size:17px}.reg-pic{width:88px;height:88px}}
+
 /* ================= PASOS ================= */
 .steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin:10px 0 20px;list-style:none}
 .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 8px;text-align:center}

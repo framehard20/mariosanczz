@@ -4,6 +4,7 @@ import { TopBar } from "@/components/TopBar";
 import { T } from "@/components/Lang";
 import { LangChip, LangSection } from "@/components/LangPicker";
 import {
+  ArrowRight,
   Check,
   Chevron,
   Discord,
@@ -17,6 +18,7 @@ import {
 import { HANDLE, LINKS } from "@/lib/site";
 import photo from "@/assets/mariosanczz.jpg";
 import flayfindLogo from "@/assets/flayfind.png";
+import uidbuyMascot from "@/assets/uidbuy.webp";
 
 type ExtProps = {
   href: string;
@@ -61,6 +63,21 @@ export default function Home() {
           </div>
           <LangChip />
         </header>
+
+        {/* ================= REGISTRO EN UIDBUY ================= */}
+        {/* the first thing after the profile: sign up with the referral link;
+            Uidbuy's mascot on the right, for a friendly, trustworthy feel */}
+        <Ext className="reg reveal d10" href={LINKS.registro} event="1_registro_uidbuy">
+          <span className="reg-txt">
+            <span className="reg-tag"><T k="reg.tag" /></span>
+            <span className="reg-t"><T k="reg.t" /></span>
+            <span className="reg-offer"><T k="reg.offer" /></span>
+            <span className="reg-cta"><T k="reg.cta" /><ArrowRight /></span>
+          </span>
+          <span className="reg-pic">
+            <Image src={uidbuyMascot} alt="" width={108} height={108} loading="eager" />
+          </span>
+        </Ext>
 
         {/* ================= 3 PASOS ================= */}
         <ol className="steps reveal d10">

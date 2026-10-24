@@ -16,6 +16,8 @@ export const SITE_DOMAIN = "mariosanczz.com";
 export const REGISTRADOS = 1000;
 
 export const LINKS = {
+  // registro en Uidbuy con mi código de referido (el botón grande de arriba)
+  registro: "https://www.uidbuy.com/register?ref=UWSV3X",
   outfits: "https://flayfind.com",
   // la lista de productos en forma de web (Masterspread), aparte de la hoja
   masterspread: "https://www.masterspread.com",

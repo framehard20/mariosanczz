@@ -5,6 +5,11 @@ export const zh = {
   "tb.btn": "商品清单 + 优惠在这里",
   "tb.btnSub": "masterspread.com",
   "hero.pitch": "在中国市场购物，**简单又便宜**",
+  "reg.tag": "免费注册",
+  "reg.t": "创建你的 Uidbuy 账户",
+  "reg.offer": "用我的链接：**800 美元优惠** + **运费 40% 折扣**券",
+  "reg.cta": "立即注册",
+
   "step.1": "创建账户",
   "step.2": "挑选穿搭",
   "step.3": "送货上门",
