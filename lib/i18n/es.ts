@@ -25,6 +25,8 @@ export const es = {
   "shop.s": "Busca, filtra y abre cada prenda",
   "outf.t": "Lista de outfits",
   "outf.s": "Los conjuntos ya montados y su precio",
+  "prod.t": "Lista de productos",
+  "prod.s": "Todas las prendas con su enlace · necesitas cuenta para comprar",
 
   "help.title": "¿Tienes dudas? Háblame aquí",
   "foto.t": "¿Buscas otra prenda? Búscala por foto",

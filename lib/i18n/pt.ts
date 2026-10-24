@@ -19,6 +19,8 @@ export const pt = {
   "shop.s": "Pesquisa, filtra e abre cada peça",
   "outf.t": "Lista de outfits",
   "outf.s": "Os conjuntos já montados e o preço",
+  "prod.t": "Lista de produtos",
+  "prod.s": "Cada peça com o seu link · precisas de conta para comprar",
   "help.title": "Tens dúvidas? Fala comigo aqui",
   "foto.t": "Procuras outra peça? Procura por foto",
   "foto.s": "Manda-me a foto no Discord e eu arranjo-te o link",

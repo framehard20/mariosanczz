@@ -19,6 +19,8 @@ export const en = {
   "shop.s": "Search, filter and open each piece",
   "outf.t": "Outfit list",
   "outf.s": "Complete outfits and their price",
+  "prod.t": "Product list",
+  "prod.s": "Every piece with its buy link · account needed to buy",
   "help.title": "Questions? Talk to me here",
   "foto.t": "Looking for something else? Search by photo",
   "foto.s": "Send me the photo on Discord and I will find the link",

@@ -19,6 +19,8 @@ export const fr = {
   "shop.s": "Cherche, filtre et ouvre chaque pièce",
   "outf.t": "Liste des tenues",
   "outf.s": "Les tenues complètes et leur prix",
+  "prod.t": "Liste des produits",
+  "prod.s": "Chaque pièce avec son lien · compte requis pour acheter",
   "help.title": "Des questions ? Parle-moi ici",
   "foto.t": "Tu cherches un autre vêtement ? Cherche-le par photo",
   "foto.s": "Envoie-moi la photo sur Discord et je te trouve le lien",

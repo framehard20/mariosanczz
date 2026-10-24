@@ -21,6 +21,9 @@ export const LINKS = {
   outfits: "https://flayfind.com",
   // la lista de productos en forma de web (Masterspread), aparte de la hoja
   masterspread: "https://www.masterspread.com",
+  // la hoja de Google con todos los productos (sus links son de Uidbuy con mi código)
+  productos:
+    "https://docs.google.com/spreadsheets/d/17WHP0zYLfmwC9NZ9itCUNSPT9ymWnxT6qIXDKgO09Cs/edit?gid=1281688000#gid=1281688000",
   buscador: "https://discord.gg/BUrt9M2dyS",
   discord: "https://discord.gg/BUrt9M2dyS",
   telegram: "https://t.me/addlist/gdNCnbOv_Q85NTNk",

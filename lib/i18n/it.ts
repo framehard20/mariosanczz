@@ -19,6 +19,8 @@ export const it = {
   "shop.s": "Cerca, filtra e apri ogni capo",
   "outf.t": "Lista degli outfit",
   "outf.s": "Gli outfit completi e il loro prezzo",
+  "prod.t": "Lista dei prodotti",
+  "prod.s": "Ogni capo con il suo link · serve account per comprare",
   "help.title": "Hai dubbi? Scrivimi qui",
   "foto.t": "Cerchi un altro capo? Cercalo con una foto",
   "foto.s": "Mandami la foto su Discord e ti trovo il link",
