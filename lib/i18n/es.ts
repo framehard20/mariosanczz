@@ -12,7 +12,7 @@ export const es = {
 
   "reg.tag": "Registro gratis",
   "reg.t": "Crea tu cuenta en Uidbuy",
-  "reg.offer": "Con mi enlace: **800 $ de descuento** + cupón del **40 % en el envío**",
+  "reg.offer": "Con mi enlace: **800 $ GRATIS en cupones** + cupón del **40 % en el envío**",
   "reg.cta": "Registrarme ahora",
 
   "step.1": "Crea tu cuenta",

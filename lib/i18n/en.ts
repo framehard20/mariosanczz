@@ -7,7 +7,7 @@ export const en = {
   "hero.pitch": "Shopping the Chinese market, **easy and cheap**",
   "reg.tag": "Free sign-up",
   "reg.t": "Create your Uidbuy account",
-  "reg.offer": "With my link: **$800 off** + a **40% shipping** coupon",
+  "reg.offer": "With my link: **$800 FREE in coupons** + a **40% shipping** coupon",
   "reg.cta": "Sign up now",
 
   "step.1": "Create your account",
