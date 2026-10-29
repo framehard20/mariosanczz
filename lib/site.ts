@@ -20,6 +20,8 @@ export const LINKS = {
   registro: "https://www.uidbuy.com/register?ref=UWSV3X",
   // la guía en PDF (public/): cómo comprar en Uidbuy paso a paso, con capturas
   guia: "/guia-comprar-en-uidbuy.pdf",
+  // el tutorial en vídeo (se abre en YouTube, así las visitas cuentan en el canal)
+  tutorial: "https://youtu.be/a_jjj93kVg4",
   outfits: "https://flayfind.com",
   // la lista de productos en forma de web (Masterspread), aparte de la hoja
   masterspread: "https://www.masterspread.com",

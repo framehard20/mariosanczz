@@ -9,6 +9,10 @@ export const fr = {
   "reg.t": "Crée ton compte Uidbuy",
   "reg.offer": "Avec mon lien : **800 $ OFFERTS en bons** + un bon de **40 % sur la livraison**",
   "reg.cta": "M'inscrire",
+  "vid.tag": "Tutoriel · 5 min",
+  "vid.t": "Comment acheter sur Uidbuy, pas à pas",
+  "vid.s": "De l'inscription à chez toi · vidéo en espagnol",
+  "vid.cta": "Voir sur YouTube",
   "guia.t": "Guide pas à pas : comment acheter",
   "guia.s": "De l'inscription à chez toi, avec de vraies captures · PDF en espagnol",
 

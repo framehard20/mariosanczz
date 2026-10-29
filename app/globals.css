@@ -178,6 +178,30 @@ body{
 @keyframes regcalm{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-2px) scale(1.02)}}
 @media (max-width:360px){.reg{padding:14px 10px 14px 14px}.reg-t{font-size:17px}.reg-pic{width:88px;height:88px}}
 
+/* ================= TUTORIAL EN VÍDEO ================= */
+.vid{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin-top:14px;padding:10px 10px 14px;
+  background:var(--dark);border-radius:22px;text-decoration:none;color:#fff;
+  box-shadow:0 18px 36px -20px rgba(0,0,0,.6);transition:transform .12s}
+.vid:active{transform:scale(.985)}
+.vid-pic{position:relative;flex:1 1 100%;display:block;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000}
+.vid-pic img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.vid:hover .vid-pic img{transform:scale(1.03)}
+.vid-pic::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(0,0,0,0) 35%,rgba(0,0,0,.35) 100%)}
+.vid-tag{position:absolute;z-index:1;top:10px;left:10px;font-size:11px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;
+  background:rgba(0,0,0,.72);color:#fff;border-radius:100px;padding:5px 10px;backdrop-filter:blur(4px)}
+.vid-play{position:absolute;z-index:1;left:50%;top:50%;width:72px;height:51px;transform:translate(-50%,-50%);
+  filter:drop-shadow(0 6px 14px rgba(0,0,0,.45));transition:transform .15s}
+.vid-play svg{width:100%;height:100%;display:block}
+.vid:hover .vid-play{transform:translate(-50%,-50%) scale(1.08)}
+@media (prefers-reduced-motion:no-preference){.vid-play{animation:vidpulse 2.4s ease-in-out infinite}}
+@keyframes vidpulse{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.07)}}
+.vid-txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px;padding-left:6px}
+.vid-t{font-family:var(--font);font-weight:900;font-size:16px;line-height:1.2;letter-spacing:-.2px}
+.vid-s{font-size:12px;color:#B9BBC2;line-height:1.35}
+.vid-cta{flex:0 0 auto;font-family:var(--font);font-weight:900;font-size:13px;line-height:1;background:#FF0000;color:#fff;
+  border-radius:12px;padding:10px 12px;box-shadow:0 3px 0 #B80000}
+@media (max-width:360px){.vid-cta{flex:1 1 100%;text-align:center}}
+
 /* the guide sits right under the sign-up card (whose 4px shadow eats into the gap) */
 .link.guide{margin-top:14px}
 .link.guide .ico{background:var(--green-soft);color:var(--green-deep)}

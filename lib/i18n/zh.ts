@@ -9,6 +9,10 @@ export const zh = {
   "reg.t": "创建你的 Uidbuy 账户",
   "reg.offer": "用我的链接：**免费 800 美元优惠券** + **运费 40% 折扣**券",
   "reg.cta": "立即注册",
+  "vid.tag": "教程 · 5 分钟",
+  "vid.t": "如何在 Uidbuy 购买：分步讲解",
+  "vid.s": "从注册到收货 · 西班牙语视频",
+  "vid.cta": "在 YouTube 观看",
   "guia.t": "分步指南：如何购买",
   "guia.s": "从注册到收货，真实截图 · 西班牙语 PDF",
 

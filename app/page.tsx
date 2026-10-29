@@ -21,6 +21,7 @@ import { HANDLE, LINKS } from "@/lib/site";
 import photo from "@/assets/mariosanczz.jpg";
 import flayfindLogo from "@/assets/flayfind.png";
 import uidbuyMascot from "@/assets/uidbuy.webp";
+import tutorialThumb from "@/assets/tutorial-uidbuy.webp";
 
 type ExtProps = {
   href: string;
@@ -79,6 +80,23 @@ export default function Home() {
           <span className="reg-pic">
             <Image src={uidbuyMascot} alt="" width={108} height={108} loading="eager" />
           </span>
+        </Ext>
+
+        {/* the video tutorial: its YouTube cover with a big play button; it opens
+            on YouTube so the views count on the channel */}
+        <Ext className="vid reveal d10" href={LINKS.tutorial} event="2_tutorial_youtube">
+          <span className="vid-pic">
+            <Image src={tutorialThumb} alt="" sizes="(max-width: 480px) 100vw, 440px" loading="eager" />
+            <span className="vid-tag"><T k="vid.tag" /></span>
+            <span className="vid-play" aria-hidden="true">
+              <svg viewBox="0 0 68 48"><path d="M66.5 7.7A8.5 8.5 0 0 0 60.5 1.6C55.2.2 34 .2 34 .2s-21.2 0-26.5 1.4A8.5 8.5 0 0 0 1.5 7.7C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6.1C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.4a8.5 8.5 0 0 0 6-6.1C67.9 35 67.9 24 67.9 24s0-11-1.4-16.3z" fill="#FF0000"/><path d="M27 34V14l18 10z" fill="#fff"/></svg>
+            </span>
+          </span>
+          <span className="vid-txt">
+            <span className="vid-t"><T k="vid.t" /></span>
+            <span className="vid-s"><T k="vid.s" /></span>
+          </span>
+          <span className="vid-cta"><T k="vid.cta" /> ↗</span>
         </Ext>
 
         {/* the step-by-step PDF (in Spanish), right under the sign-up */}
