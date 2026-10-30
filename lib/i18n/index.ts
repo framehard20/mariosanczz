@@ -43,7 +43,8 @@ export function pickLang(preferred: readonly string[]): Lang {
     const hit = LANGS.find((l) => l.code === base);
     if (hit) return hit.code;
   }
-  return DEFAULT_LANG;
+  // a device in a language the site doesn't have reads it in English
+  return preferred.length ? "en" : DEFAULT_LANG;
 }
 
 /** Looks up a string and fills its {placeholders}. */
