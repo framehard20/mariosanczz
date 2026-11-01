@@ -49,7 +49,7 @@ export default function Privacidad() {
 
       <h2>Con quién se comparten</h2>
       <p>
-        No vendemos ni cedemos datos a nadie. La web la alojan Vercel (alojamiento) y Umami (estadísticas), que solo tratan
+        No vendemos ni cedemos datos a nadie. La web la alojan Vercel (alojamiento), y Umami y Supabase (estadísticas), que solo tratan
         datos por cuenta nuestra. Pueden guardarlos fuera de la Unión Europea; en ese caso la transferencia se ampara en el Marco
         de Privacidad de Datos UE-EE. UU. o en las cláusulas contractuales tipo aprobadas por la Comisión Europea.
       </p>

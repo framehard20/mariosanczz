@@ -8,11 +8,11 @@ const isDev = process.env.NODE_ENV !== "production";
 // 'wasm-unsafe-eval' + blob: are for the 3D viewer (meshopt WASM decoder, embedded GLB textures).
 const csp = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cloud.umami.is${isDev ? " 'unsafe-eval'" : ""}`,
+  `script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://radar-datos.vercel.app${isDev ? " 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
   "font-src 'self'",
-  `connect-src 'self' blob: https://cloud.umami.is https://gateway.umami.is${isDev ? " ws:" : ""}`,
+  `connect-src 'self' blob: https://radar-datos.vercel.app${isDev ? " ws:" : ""}`,
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",

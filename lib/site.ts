@@ -43,6 +43,6 @@ export const NAVIDAD_LIMITE = "";
 // Umami (analítica gratis y sin cookies). Deja websiteId vacío para desactivarla.
 // Si cambias de proveedor, actualiza también la CSP en next.config.ts.
 export const UMAMI = {
-  websiteId: "dcbe0e7c-7885-485d-bd0b-32da228972dd",
-  src: "https://cloud.umami.is/script.js",
+  websiteId: "fc8129c2-cb18-4921-8995-e812a3ec136c",
+  src: "https://radar-datos.vercel.app/script.js",
 };
