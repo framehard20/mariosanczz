@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { LINKS, REGISTRADOS } from "@/lib/site";
-import { ArrowRight, Masterspread } from "./icons";
+import { LINKS, TELEGRAM_MIEMBROS } from "@/lib/site";
+import { ArrowRight, Telegram } from "./icons";
 import { localeOf } from "@/lib/i18n";
 import { useLang } from "./Lang";
 
@@ -12,8 +12,11 @@ import { useLang } from "./Lang";
 // a number that is true and that this audience trusts more anyway: how many
 // people have already registered.
 //
-// Since 21 Oct 2026 the bar sends people to masterspread.com (the product list
-// as a website, where the $800 + 40% shipping offer is), at Mario's request.
+// Since 14 Nov 2026 the bar's button opens Mario's Telegram community (help,
+// discounts and products), at his request; it fires the same event as every
+// other link to Telegram. The product list (masterspread.com) stays in Proveedores.
+// The info line above it is about the community too: its name and how many
+// people are in it (Mario's figure, in lib/site.ts). The button is Telegram blue.
 
 export function TopBar() {
   const { t, lang } = useLang();
@@ -31,19 +34,18 @@ export function TopBar() {
       <div className="topbar-in">
         <div className="tb-info">
           <span className="tb-disc">{t("tb.disc")}</span>
-          <span className="tb-msg">{t("tb.msg")}</span>
           <span className="tb-sep">·</span>
-          <span className="tb-proof">{t("tb.proof", { n: REGISTRADOS.toLocaleString(localeOf(lang)) })}</span>
+          <span className="tb-proof">{t("tb.proof", { n: TELEGRAM_MIEMBROS.toLocaleString(localeOf(lang)) })}</span>
         </div>
 
         <a
           className="tb-btn"
-          href={LINKS.masterspread}
+          href={LINKS.telegram}
           target="_blank"
           rel="noopener"
-          data-umami-event="1_masterspread_barra"
+          data-umami-event="3_telegram"
         >
-          <span className="tb-btn-logo"><Masterspread /></span>
+          <span className="tb-btn-logo tb-tg"><Telegram /></span>
           <span className="tb-btn-label">
             {t("tb.btn")}
             <span className="tb-btn-sub">{t("tb.btnSub")}</span>

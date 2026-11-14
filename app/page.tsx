@@ -70,10 +70,14 @@ export default function Home() {
         {/* ================= REGISTRO EN UIDBUY ================= */}
         {/* the first thing after the profile: sign up with the referral link;
             Uidbuy's mascot on the right, for a friendly, trustworthy feel */}
-        <Ext className="reg reveal d10" href={LINKS.registro} event="1_registro_uidbuy">
+        {/* the wrapper carries the entrance animation so the card itself is free to
+            do its short shake */}
+        <div className="reveal d10">
+        <Ext className="reg" href={LINKS.registro} event="1_registro_uidbuy">
           <span className="reg-txt">
             <span className="reg-tag"><T k="reg.tag" /></span>
             <span className="reg-t"><T k="reg.t" /></span>
+            <span className="reg-agent"><T k="reg.agent" /></span>
             <span className="reg-offer"><T k="reg.offer" /></span>
             <span className="reg-cta"><T k="reg.cta" /><ArrowRight /></span>
           </span>
@@ -81,37 +85,9 @@ export default function Home() {
             <Image src={uidbuyMascot} alt="" width={108} height={108} loading="eager" />
           </span>
         </Ext>
+        </div>
 
-        {/* the video tutorial: its YouTube cover with a big play button; it opens
-            on YouTube so the views count on the channel */}
-        <Ext className="vid reveal d10" href={LINKS.tutorial} event="2_tutorial_youtube">
-          <span className="vid-pic">
-            <Image src={tutorialThumb} alt="" sizes="(max-width: 480px) 100vw, 440px" loading="eager" />
-            <span className="vid-tag"><T k="vid.tag" /></span>
-            <span className="vid-play" aria-hidden="true">
-              <svg viewBox="0 0 68 48"><path d="M66.5 7.7A8.5 8.5 0 0 0 60.5 1.6C55.2.2 34 .2 34 .2s-21.2 0-26.5 1.4A8.5 8.5 0 0 0 1.5 7.7C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6.1C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.4a8.5 8.5 0 0 0 6-6.1C67.9 35 67.9 24 67.9 24s0-11-1.4-16.3z" fill="#FF0000"/><path d="M27 34V14l18 10z" fill="#fff"/></svg>
-            </span>
-          </span>
-          <span className="vid-txt">
-            <span className="vid-t"><T k="vid.t" /></span>
-            <span className="vid-s"><T k="vid.s" /></span>
-          </span>
-          <span className="vid-cta"><T k="vid.cta" /> ↗</span>
-        </Ext>
 
-        {/* the step-by-step PDF (in Spanish), right under the sign-up */}
-        <Ext className="link guide reveal d10" href={LINKS.guia} event="2_guia_pdf">
-          <span className="ico"><Guide /></span>
-          <span className="txt"><span className="t"><T k="guia.t" /></span><span className="s"><T k="guia.s" /></span></span>
-          <Chevron />
-        </Ext>
-
-        {/* ================= 3 PASOS ================= */}
-        <ol className="steps reveal d10">
-          <li className="step"><div className="n">1</div><p><T k="step.1" /></p></li>
-          <li className="step"><div className="n">2</div><p><T k="step.2" /></p></li>
-          <li className="step"><div className="n">3</div><p><T k="step.3" /></p></li>
-        </ol>
 
         {/* ================= PROVEEDORES ================= */}
         <div className="sec-head reveal d11" data-3d="pants">
@@ -137,6 +113,23 @@ export default function Home() {
           <Chevron />
         </Ext>
 
+        {/* the video tutorial, under Proveedores: its YouTube cover with a big play button; it opens
+            on YouTube so the views count on the channel */}
+        <Ext className="vid reveal d16" href={LINKS.tutorial} event="2_tutorial_youtube">
+          <span className="vid-pic">
+            <Image src={tutorialThumb} alt="" sizes="(max-width: 480px) 100vw, 440px" loading="eager" />
+            <span className="vid-tag"><T k="vid.tag" /></span>
+            <span className="vid-play" aria-hidden="true">
+              <svg viewBox="0 0 68 48"><path d="M66.5 7.7A8.5 8.5 0 0 0 60.5 1.6C55.2.2 34 .2 34 .2s-21.2 0-26.5 1.4A8.5 8.5 0 0 0 1.5 7.7C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6.1C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.4a8.5 8.5 0 0 0 6-6.1C67.9 35 67.9 24 67.9 24s0-11-1.4-16.3z" fill="#FF0000"/><path d="M27 34V14l18 10z" fill="#fff"/></svg>
+            </span>
+          </span>
+          <span className="vid-txt">
+            <span className="vid-t"><T k="vid.t" /></span>
+            <span className="vid-s"><T k="vid.s" /></span>
+          </span>
+          <span className="vid-cta"><T k="vid.cta" /> ↗</span>
+        </Ext>
+
         {/* ================= AYUDA / COMUNIDAD ================= */}
         <h3 className="eyebrow reveal d17" data-3d="sneaker"><T k="help.title" /></h3>
 
@@ -156,6 +149,20 @@ export default function Home() {
             <span className="txt"><span className="t">Discord</span></span>
           </Ext>
         </div>
+
+        {/* the step-by-step PDF (in Spanish), in the help section, under Telegram and Discord */}
+        <Ext className="link guide reveal d22" href={LINKS.guia} event="2_guia_pdf">
+          <span className="ico"><Guide /></span>
+          <span className="txt"><span className="t"><T k="guia.t" /></span><span className="s"><T k="guia.s" /></span></span>
+          <Chevron />
+        </Ext>
+
+        {/* ================= 3 PASOS ================= */}
+        <ol className="steps reveal d22">
+          <li className="step"><div className="n">1</div><p><T k="step.1" /></p></li>
+          <li className="step"><div className="n">2</div><p><T k="step.2" /></p></li>
+          <li className="step"><div className="n">3</div><p><T k="step.3" /></p></li>
+        </ol>
 
         {/* ================= IDIOMA ================= */}
         <LangSection />

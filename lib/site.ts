@@ -15,6 +15,10 @@ export const SITE_DOMAIN = "mariosanczz.com";
 // número que puedas demostrar, redondeado hacia abajo, para que el "+" sea verdad.
 export const REGISTRADOS = 1000;
 
+// Gente dentro de mi comunidad de Telegram (sale en la barra de arriba).
+// Cifra que dio Mario el 14 nov 2026. Cámbiala aquí cuando crezca.
+export const TELEGRAM_MIEMBROS = 700;
+
 export const LINKS = {
   // registro en Uidbuy con mi código de referido (el botón grande de arriba)
   registro: "https://www.uidbuy.com/register?ref=UWSV3X",

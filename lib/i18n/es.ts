@@ -1,10 +1,9 @@
 // Spanish: the source language. Every other file must have exactly these keys.
 export const es = {
-  "tb.msg": "en envío",
-  "tb.disc": "800$ + 40%",
-  "tb.proof": "+{n} ya registrados",
-  "tb.btn": "Lista de productos + descuento aquí",
-  "tb.btnSub": "masterspread.com",
+  "tb.disc": "Comunidad",
+  "tb.proof": "{n} usuarios dentro",
+  "tb.btn": "Mi comunidad de Telegram",
+  "tb.btnSub": "Ayuda, descuentos y productos",
 
   "hero.pitch": "Comprar en el mercado chino, **fácil y barato**",
 
@@ -12,6 +11,7 @@ export const es = {
 
   "reg.tag": "Registro gratis",
   "reg.t": "Crea tu cuenta en Uidbuy",
+  "reg.agent": "El agente que te permite comprar en el mercado chino",
   "reg.offer": "Con mi enlace: **800 $ GRATIS en cupones** + cupón del **40 % en el envío**",
   "reg.cta": "Registrarme ahora",
   "vid.tag": "Tutorial · 5 min",
