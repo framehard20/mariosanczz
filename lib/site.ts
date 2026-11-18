@@ -27,6 +27,8 @@ export const LINKS = {
   // el tutorial en vídeo (se abre en YouTube, así las visitas cuentan en el canal)
   tutorial: "https://youtu.be/a_jjj93kVg4",
   outfits: "https://flayfind.com",
+  // el buscador de Repfind con mi código de invitación (debajo de Masterspread)
+  repfind: "https://www.repfind.ai/inviteCode=hhbaqc89",
   // la lista de productos en forma de web (Masterspread), aparte de la hoja
   masterspread: "https://www.masterspread.com",
   // la hoja de Google con todos los productos (sus links son de Uidbuy con mi código)

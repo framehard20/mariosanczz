@@ -27,6 +27,8 @@ export const es = {
 
   "prov.title": "Proveedores",
   "prov.sub": "La ropa de mis vídeos, con su enlace de compra",
+  "rep.t": "Buscador de productos",
+  "rep.s": "Busca cualquier prenda y mira sus fotos de calidad",
   "shop.t": "Lista productos web",
   "shop.s": "Busca, filtra y abre cada prenda",
   "outf.t": "Lista de outfits",

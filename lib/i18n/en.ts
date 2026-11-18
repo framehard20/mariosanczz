@@ -21,6 +21,8 @@ export const en = {
   "step.3": "Get it delivered",
   "prov.title": "Suppliers",
   "prov.sub": "The clothes from my videos, with their buy links",
+  "rep.t": "Product search",
+  "rep.s": "Search any item and see its quality-check photos",
   "shop.t": "Web product list",
   "shop.s": "Search, filter and open each piece",
   "outf.t": "Outfit list",

@@ -20,6 +20,7 @@ import {
 import { HANDLE, LINKS } from "@/lib/site";
 import photo from "@/assets/mariosanczz.jpg";
 import flayfindLogo from "@/assets/flayfind.png";
+import repfindLogo from "@/assets/repfind.png";
 import uidbuyMascot from "@/assets/uidbuy.webp";
 import tutorialThumb from "@/assets/tutorial-uidbuy.webp";
 
@@ -87,8 +88,6 @@ export default function Home() {
         </Ext>
         </div>
 
-
-
         {/* ================= PROVEEDORES ================= */}
         <div className="sec-head reveal d11" data-3d="pants">
           <h3><T k="prov.title" /></h3>
@@ -96,8 +95,15 @@ export default function Home() {
         </div>
 
         <Ext className="link featured reveal d12" href={LINKS.masterspread} event="2_masterspread">
-          <span className="ico"><Masterspread /></span>
+          <span className="ico ms"><Masterspread /></span>
           <span className="txt"><span className="t"><T k="shop.t" /> <span className="by">Masterspread</span></span><span className="s"><T k="shop.s" /></span></span>
+          <Chevron />
+        </Ext>
+
+        {/* Repfind's search, with Mario's invite code, right under Masterspread */}
+        <Ext className="link reveal d12" href={LINKS.repfind} event="2_repfind">
+          <span className="ico rf"><Image src={repfindLogo} alt="" width={42} height={42} /></span>
+          <span className="txt"><span className="t"><T k="rep.t" /> <span className="by">Repfind</span></span><span className="s"><T k="rep.s" /></span></span>
           <Chevron />
         </Ext>
 

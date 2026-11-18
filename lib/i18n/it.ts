@@ -21,6 +21,8 @@ export const it = {
   "step.3": "Ricevilo a casa",
   "prov.title": "Fornitori",
   "prov.sub": "I vestiti dei miei video, con il link d'acquisto",
+  "rep.t": "Motore di ricerca",
+  "rep.s": "Cerca qualsiasi capo e guarda le foto QC",
   "shop.t": "Lista prodotti web",
   "shop.s": "Cerca, filtra e apri ogni capo",
   "outf.t": "Lista degli outfit",

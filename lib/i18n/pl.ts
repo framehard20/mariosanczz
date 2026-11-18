@@ -21,6 +21,8 @@ export const pl = {
   "step.3": "Odbierz w domu",
   "prov.title": "Dostawcy",
   "prov.sub": "Ubrania z moich filmów z linkiem do zakupu",
+  "rep.t": "Wyszukiwarka produktów",
+  "rep.s": "Znajdź dowolną rzecz i zobacz jej zdjęcia QC",
   "shop.t": "Lista produktów (web)",
   "shop.s": "Szukaj, filtruj, otwórz każdą rzecz",
   "outf.t": "Lista outfitów",
